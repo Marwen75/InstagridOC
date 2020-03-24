@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstagridOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k8d-30-5Sv" customClass="GridView" customModule="InstagridOC" customModuleProvider="target">
+                                <rect key="frame" x="38" y="184" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beM-Bq-EgB">
+                                        <rect key="frame" x="157" y="15" width="127.5" height="127.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="0DM-GX-pIk">
+                                                <rect key="frame" x="43" y="43" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-KB-sB7">
+                                                <rect key="frame" x="43" y="43" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i1y-zS-SXT">
+                                        <rect key="frame" x="15" y="15" width="127.5" height="127.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="e5o-MT-MAu">
+                                                <rect key="frame" x="43" y="43" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHf-c9-mqQ">
+                                                <rect key="frame" x="43" y="43" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oRH-dj-Cmu">
+                                        <rect key="frame" x="15" y="156" width="270" height="127.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="zlq-kN-pg9">
+                                                <rect key="frame" x="115" y="43" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBy-Ti-f2i">
+                                                <rect key="frame" x="115" y="43" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-83-4La">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-5b-xBV">
+                                                        <rect key="frame" x="43" y="43" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-R3-Jvy">
+                                                        <rect key="frame" x="38" y="38" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HKm-Tp-2sO">
+                                                <rect key="frame" x="142" y="0.0" width="127.5" height="127.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="STG-LU-XxX">
+                                                        <rect key="frame" x="43" y="43" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6d-VV-OmS">
+                                                        <rect key="frame" x="38" y="38" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.076848246159999994" green="0.39662730689999998" blue="0.59610676770000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outletCollection property="allButtons" destination="fgg-KB-sB7" collectionClass="NSMutableArray" id="Goc-t7-jcW"/>
+                                    <outletCollection property="allButtons" destination="UHf-c9-mqQ" collectionClass="NSMutableArray" id="Ne0-es-psw"/>
+                                    <outletCollection property="allButtons" destination="bBy-Ti-f2i" collectionClass="NSMutableArray" id="IMW-jx-oSw"/>
+                                    <outletCollection property="allButtons" destination="gGS-R3-Jvy" collectionClass="NSMutableArray" id="xlW-lG-5Rr"/>
+                                    <outletCollection property="allButtons" destination="z6d-VV-OmS" collectionClass="NSMutableArray" id="WJi-AG-bK3"/>
+                                    <outletCollection property="allImages" destination="0DM-GX-pIk" collectionClass="NSMutableArray" id="nQ1-pP-bdy"/>
+                                    <outletCollection property="allImages" destination="e5o-MT-MAu" collectionClass="NSMutableArray" id="aQo-Wn-exR"/>
+                                    <outletCollection property="allImages" destination="zlq-kN-pg9" collectionClass="NSMutableArray" id="x3c-N1-SmO"/>
+                                    <outletCollection property="allImages" destination="JsS-5b-xBV" collectionClass="NSMutableArray" id="xBO-oX-aMr"/>
+                                    <outletCollection property="allImages" destination="STG-LU-XxX" collectionClass="NSMutableArray" id="ZhU-5l-od5"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3N9-Cv-KWu" customClass="SelectGridView" customModule="InstagridOC" customModuleProvider="target">
+                                <rect key="frame" x="38" y="555" width="300" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Layout 1" translatesAutoresizingMaskIntoConstraints="NO" id="Vrm-q3-xoz">
+                                        <rect key="frame" x="8" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="iFY-d6-XXC">
+                                        <rect key="frame" x="110" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="9S9-pU-zdK">
+                                        <rect key="frame" x="212" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J14-c1-TeJ">
+                                        <rect key="frame" x="128" y="18" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didSelectMiddleGrid" destination="BYZ-38-t0r" eventType="touchUpInside" id="4EJ-nR-Zrr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cd-iD-ziW">
+                                        <rect key="frame" x="230" y="16" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didSelectRightGrid" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFW-CI-Zlf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXC-t3-EZD">
+                                        <rect key="frame" x="26" y="16" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didSelectLeftGrid" destination="BYZ-38-t0r" eventType="touchUpInside" id="qIx-oB-2Hh"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="s0b-Ma-r93">
+                                        <rect key="frame" x="110" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="aUA-PS-4Qd">
+                                        <rect key="frame" x="8" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="NLT-SK-EDh">
+                                        <rect key="frame" x="212" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.71874177459999999" green="0.84234905240000002" blue="0.89805603030000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outletCollection property="LayoutImages" destination="Vrm-q3-xoz" collectionClass="NSMutableArray" id="Kay-Fw-IzD"/>
+                                    <outletCollection property="LayoutImages" destination="iFY-d6-XXC" collectionClass="NSMutableArray" id="qzT-78-sHq"/>
+                                    <outletCollection property="LayoutImages" destination="9S9-pU-zdK" collectionClass="NSMutableArray" id="h8N-N2-k8x"/>
+                                    <outletCollection property="layoutButtons" destination="jXC-t3-EZD" collectionClass="NSMutableArray" id="2Tn-K5-OQx"/>
+                                    <outletCollection property="layoutButtons" destination="3Cd-iD-ziW" collectionClass="NSMutableArray" id="BGK-Hl-6xK"/>
+                                    <outletCollection property="layoutButtons" destination="J14-c1-TeJ" collectionClass="NSMutableArray" id="iff-oc-fmM"/>
+                                    <outletCollection property="selectedImages" destination="s0b-Ma-r93" collectionClass="NSMutableArray" id="ASx-My-EPG"/>
+                                    <outletCollection property="selectedImages" destination="aUA-PS-4Qd" collectionClass="NSMutableArray" id="DcP-Hm-1Fz"/>
+                                    <outletCollection property="selectedImages" destination="NLT-SK-EDh" collectionClass="NSMutableArray" id="ELb-7t-SyK"/>
+                                    <outletCollection property="layoutImages" destination="Vrm-q3-xoz" collectionClass="NSMutableArray" id="Xk4-bm-X8i"/>
+                                    <outletCollection property="layoutImages" destination="iFY-d6-XXC" collectionClass="NSMutableArray" id="1I0-Gx-14e"/>
+                                    <outletCollection property="layoutImages" destination="9S9-pU-zdK" collectionClass="NSMutableArray" id="z2Q-Rs-x5I"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71874177459999999" green="0.84234905240000002" blue="0.89805603030000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="gridView" destination="k8d-30-5Sv" id="Ei4-35-Vc9"/>
+                        <outlet property="selectGridView" destination="3N9-Cv-KWu" id="poh-im-UIt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="93.103448275862078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Layout 1" width="27" height="27"/>
+        <image name="Layout 2" width="27" height="27"/>
+        <image name="Layout 3" width="27" height="27"/>
+        <image name="Plus" width="13.5" height="13.5"/>
+        <image name="Selected" width="27" height="27"/>
+    </resources>
+</document>
