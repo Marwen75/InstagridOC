@@ -6,6 +6,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Delm-Medium.otf">
+            <string>Delm-Medium</string>
+        </array>
+        <array key="ThirstySoftRegular.otf">
+            <string>ThirstySoftRegular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -61,21 +69,6 @@
                                                 <rect key="frame" x="115" y="43" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </button>
-                                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-83-4La">
-                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-5b-xBV">
-                                                        <rect key="frame" x="43" y="43" width="40" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-R3-Jvy">
-                                                        <rect key="frame" x="38" y="38" width="50" height="50"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
                                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HKm-Tp-2sO">
                                                 <rect key="frame" x="142" y="0.0" width="127.5" height="127.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,22 +84,40 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
+                                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-83-4La">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-5b-xBV">
+                                                        <rect key="frame" x="43" y="43" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-R3-Jvy">
+                                                        <rect key="frame" x="38" y="38" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.076848246159999994" green="0.39662730689999998" blue="0.59610676770000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
+                                    <outlet property="rectangle" destination="oRH-dj-Cmu" id="xA6-eB-TZX"/>
+                                    <outlet property="upperLeftSquare" destination="i1y-zS-SXT" id="CYE-5I-1PR"/>
+                                    <outlet property="upperRightSquare" destination="beM-Bq-EgB" id="U8h-lW-2aq"/>
                                     <outletCollection property="allButtons" destination="fgg-KB-sB7" collectionClass="NSMutableArray" id="Goc-t7-jcW"/>
                                     <outletCollection property="allButtons" destination="UHf-c9-mqQ" collectionClass="NSMutableArray" id="Ne0-es-psw"/>
                                     <outletCollection property="allButtons" destination="bBy-Ti-f2i" collectionClass="NSMutableArray" id="IMW-jx-oSw"/>
-                                    <outletCollection property="allButtons" destination="gGS-R3-Jvy" collectionClass="NSMutableArray" id="xlW-lG-5Rr"/>
                                     <outletCollection property="allButtons" destination="z6d-VV-OmS" collectionClass="NSMutableArray" id="WJi-AG-bK3"/>
                                     <outletCollection property="allImages" destination="0DM-GX-pIk" collectionClass="NSMutableArray" id="nQ1-pP-bdy"/>
                                     <outletCollection property="allImages" destination="e5o-MT-MAu" collectionClass="NSMutableArray" id="aQo-Wn-exR"/>
                                     <outletCollection property="allImages" destination="zlq-kN-pg9" collectionClass="NSMutableArray" id="x3c-N1-SmO"/>
-                                    <outletCollection property="allImages" destination="JsS-5b-xBV" collectionClass="NSMutableArray" id="xBO-oX-aMr"/>
                                     <outletCollection property="allImages" destination="STG-LU-XxX" collectionClass="NSMutableArray" id="ZhU-5l-od5"/>
+                                    <outletCollection property="allImages" destination="JsS-5b-xBV" collectionClass="NSMutableArray" id="xBO-oX-aMr"/>
+                                    <outletCollection property="allButtons" destination="gGS-R3-Jvy" collectionClass="NSMutableArray" id="xlW-lG-5Rr"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3N9-Cv-KWu" customClass="SelectGridView" customModule="InstagridOC" customModuleProvider="target">
@@ -175,6 +186,24 @@
                                     <outletCollection property="layoutImages" destination="9S9-pU-zdK" collectionClass="NSMutableArray" id="z2Q-Rs-x5I"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMn-WV-ICV">
+                                <rect key="frame" x="129.5" y="28" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="29"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.94901960780000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe up to share" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1p-fz-Hbo">
+                                <rect key="frame" x="61" y="144" width="208" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="ynT-Wc-2Rr">
+                                <rect key="frame" x="182" y="122" width="9.5" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.71874177459999999" green="0.84234905240000002" blue="0.89805603030000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -190,6 +219,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow Up" width="4.5" height="3.5"/>
         <image name="Layout 1" width="27" height="27"/>
         <image name="Layout 2" width="27" height="27"/>
         <image name="Layout 3" width="27" height="27"/>

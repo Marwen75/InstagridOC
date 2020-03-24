@@ -13,7 +13,9 @@ class GridView: UIView {
     @IBOutlet private var allButtons: [UIButton]!
     @IBOutlet private var allImages: [UIImageView]!
     
-    
+    @IBOutlet private var upperRightSquareView: UIView!
+    @IBOutlet private var upperLeftSquareView: UIView!
+    @IBOutlet private var rectangleView: UIView!
 }
 
 
