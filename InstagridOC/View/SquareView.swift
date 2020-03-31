@@ -30,50 +30,72 @@ class SquareView: UIView {
     }
     
     var selectedView: UIImageView? = nil
+    var selectedButton: UIButton? = nil
     
-    @IBOutlet weak var lowerLeftSquarePlusImage: UIImageView!
-    @IBOutlet weak var upperLeftSquarePlusImage: UIImageView!
-    @IBOutlet weak var upperRightSquarePlusImage: UIImageView!
-    @IBOutlet weak var lowerRightSquarePlusImage: UIImageView!
-    @IBOutlet weak var upperRectanglePlusImage: UIImageView!
-    @IBOutlet weak var lowerRectanglePlusImage: UIImageView!
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var upperRectangleButton: UIButton!
-    @IBOutlet weak var lowerRectangleButton: UIButton!
+    
     @IBOutlet weak var upperTwoSquareView: UIStackView!
-    @IBOutlet weak var upperLeftSquareButton: UIButton!
-    @IBOutlet weak var upperRightSquareButton: UIButton!
+    
     @IBOutlet weak var lowerTwoSquareView: UIStackView!
+    
+    @IBOutlet weak var uperrLeftSquareImage: UIImageView!
+    
+    @IBOutlet weak var upperRightSquareImage: UIImageView!
+    
+    @IBOutlet weak var lowerLeftSquareImage: UIImageView!
+    
+    @IBOutlet weak var lowerRightSquareImage: UIImageView!
+    
+    @IBOutlet weak var upperRectacngleImage: UIImageView!
+    
+    @IBOutlet weak var lowerRectangleImage: UIImageView!
+    
+    @IBOutlet weak var upperRectangleButton: UIButton!
+    
+    @IBOutlet weak var lowerRectangleButton: UIButton!
+    
     @IBOutlet weak var lowerLeftSquareButton: UIButton!
+    
     @IBOutlet weak var lowerRightSquareButton: UIButton!
     
+    @IBOutlet weak var upperRightSquareButton: UIButton!
+    
+    @IBOutlet weak var upperLeftSquareButton: UIButton!
+    
+    
     @IBAction func didTapUpperLeftSquareButton(_ sender: UIButton) {
-        selectedView = upperLeftSquarePlusImage
+        selectedView = uperrLeftSquareImage
+        selectedButton = upperLeftSquareButton
         oneSquareViewButtonTapped()
     }
     
     @IBAction func didTapUpperRightSquareButton(_ sender: UIButton) {
-        selectedView = upperRightSquarePlusImage
+        selectedView = upperRightSquareImage
+        selectedButton = upperRightSquareButton
         oneSquareViewButtonTapped()
     }
     
     @IBAction func didTapLowerLeftSquareButton(_ sender: UIButton) {
-        selectedView = lowerLeftSquarePlusImage
+        selectedView = lowerLeftSquareImage
+        selectedButton = lowerLeftSquareButton
         oneSquareViewButtonTapped()
     }
     
     @IBAction func didTapLowerRightSquareButton(_ sender: UIButton) {
-        selectedView = lowerRightSquarePlusImage
+        selectedView = lowerRightSquareImage
+        selectedButton = lowerRightSquareButton
         oneSquareViewButtonTapped()
     }
     
     @IBAction func didTapUpperRectangleButton(_ sender: UIButton) {
-        selectedView = upperRectanglePlusImage
+        selectedView = upperRectacngleImage
+        selectedButton = upperRectangleButton
         oneSquareViewButtonTapped()
     }
     
     @IBAction func didTapLowerRectangleButton(_ sender: UIButton) {
-        selectedView = lowerRectanglePlusImage
+        selectedView = lowerRectangleImage
+        selectedButton = lowerRectangleButton
         oneSquareViewButtonTapped()
     }
     
@@ -103,40 +125,38 @@ class SquareView: UIView {
         switch gridDisposition {
         case .rectangleDown:
             
-            makeTheImagesAppear(showThose: [lowerRectanglePlusImage, upperRightSquarePlusImage, upperLeftSquarePlusImage], notThose: [lowerRightSquarePlusImage, lowerLeftSquarePlusImage, upperRectanglePlusImage])
-            
-            lowerRectangleButton.isHidden = false
+            makeButtonsAppear(showThose: [lowerRectangleButton, upperLeftSquareButton, upperRightSquareButton], notThose: [upperRectangleButton, lowerLeftSquareButton, lowerRightSquareButton])
+            lowerRectangleImage.isHidden = false
             upperTwoSquareView.isHidden = false
             lowerTwoSquareView.isHidden = true
-            upperRectangleButton.isHidden = true
+            upperRectacngleImage.isHidden = true
             
         case .fullSquares:
             
-            makeTheImagesAppear(showThose: [upperLeftSquarePlusImage, upperRightSquarePlusImage, lowerLeftSquarePlusImage, lowerRightSquarePlusImage], notThose: [upperRectanglePlusImage, lowerRectanglePlusImage])
-            
-            lowerRectangleButton.isHidden = true
+            makeButtonsAppear(showThose: [lowerLeftSquareButton, upperRightSquareButton, lowerRightSquareButton, upperLeftSquareButton], notThose: [upperRectangleButton, lowerRectangleButton])
+            lowerRectangleImage.isHidden = true
             upperTwoSquareView.isHidden = false
             lowerTwoSquareView.isHidden = false
-            upperRectangleButton.isHidden = true
+            upperRectacngleImage.isHidden = true
             
         case .rectangleUp:
             
-            makeTheImagesAppear(showThose: [upperRectanglePlusImage, lowerRightSquarePlusImage, lowerLeftSquarePlusImage], notThose: [lowerRectanglePlusImage, upperRightSquarePlusImage, upperLeftSquarePlusImage])
-            
-            lowerRectangleButton.isHidden = true
+            makeButtonsAppear(showThose: [upperRectangleButton, lowerLeftSquareButton, lowerRightSquareButton], notThose: [lowerRectangleButton, upperRightSquareButton, upperLeftSquareButton])
+            lowerRectangleImage.isHidden = true
             upperTwoSquareView.isHidden = true
             lowerTwoSquareView.isHidden = false
-            upperRectangleButton.isHidden = false
+            upperRectacngleImage.isHidden = false
         }
     }
     
-    private func makeTheImagesAppear(showThose: [UIImageView], notThose: [UIImageView]) {
+    private func makeButtonsAppear(showThose: [UIButton], notThose: [UIButton]) {
         
-        for images in showThose {
-            images.isHidden = false
+        
+        for button in showThose {
+            button.isHidden = false
         }
-        for images in notThose {
-            images.isHidden = true
+        for button in notThose {
+            button.isHidden = true
         }
     }
 }

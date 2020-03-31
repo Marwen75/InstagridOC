@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ThirstySoftRegular.otf">
+            <string>ThirstySoftRegular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -88,9 +93,20 @@
                                     <constraint firstAttribute="height" constant="300" id="mES-EV-vEh"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu4-ev-VV4">
+                                <rect key="frame" x="130.5" y="20" width="114.5" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="UE7-3W-ZIt"/>
+                                    <constraint firstAttribute="width" constant="114.5" id="pqk-9A-6Ic"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.71874177459999999" green="0.84234905240000002" blue="0.89805603030000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Lu4-ev-VV4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2uC-QR-AQT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Nc-7g-fzt" secondAttribute="bottom" constant="32" id="3AC-hz-ypa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I6A-Xe-9EB" secondAttribute="bottom" constant="32" id="6cg-d8-dt5"/>
                             <constraint firstItem="6c5-t4-gx2" firstAttribute="top" secondItem="vBu-7D-yQG" secondAttribute="bottom" constant="71.5" id="F2P-kw-eFd"/>
@@ -99,6 +115,7 @@
                             <constraint firstItem="JAM-su-yoL" firstAttribute="leading" secondItem="I6A-Xe-9EB" secondAttribute="trailing" constant="19.5" id="WxS-ad-PfN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6c5-t4-gx2" secondAttribute="bottom" constant="32" id="Y15-PR-WxD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JAM-su-yoL" secondAttribute="bottom" constant="32" id="cIQ-hJ-Xsp"/>
+                            <constraint firstItem="Lu4-ev-VV4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="g7f-Bn-Cmg"/>
                             <constraint firstItem="4Nc-7g-fzt" firstAttribute="leading" secondItem="JAM-su-yoL" secondAttribute="trailing" constant="20.5" id="gTt-mw-Jlv"/>
                             <constraint firstItem="JAM-su-yoL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xuT-nV-4yC"/>
                             <constraint firstItem="JAM-su-yoL" firstAttribute="leading" secondItem="I6A-Xe-9EB" secondAttribute="trailing" constant="19.5" id="ysI-yp-XBu"/>

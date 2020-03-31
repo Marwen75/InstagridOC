@@ -47,6 +47,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        squareView.gridDisposition = .rectangleDown
         let name = Notification.Name(rawValue: "ButtonTapped")
         NotificationCenter.default.addObserver(self, selector: #selector(openUserLibrary),
             name: name, object: nil)
@@ -54,7 +55,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         image.delegate = self
     }
     
-    @objc func oneButtonTapped(gesture: UITapGestureRecognizer) {
+    @objc func photoWasTapped(gesture: UITapGestureRecognizer) {
         openUserLibrary()
     }
     
@@ -71,8 +72,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             squareView.selectedView?.image = pickedImage
+            squareView.selectedButton?.isHidden = true
         }
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(oneButtonTapped(gesture:)))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(photoWasTapped(gesture:)))
         squareView.selectedView?.addGestureRecognizer(tapGestureRecognizer)
         dismiss(animated: true, completion: nil)
         
