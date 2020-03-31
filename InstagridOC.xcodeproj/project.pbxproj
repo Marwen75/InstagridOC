@@ -17,10 +17,8 @@
 		C2788BA9242272CA00BC630D /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2788BA8242272CA00BC630D /* ThirstySoftRegular.otf */; };
 		C2788BAF2422831D00BC630D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2788BAE2422831D00BC630D /* Default-568h@2x.png */; };
 		C2788BB1242375FC00BC630D /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788BB0242375FC00BC630D /* Grid.swift */; };
-		C2788BB72423DB0F00BC630D /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788BB62423DB0F00BC630D /* GridView.swift */; };
-		C2788BBB2424A4EE00BC630D /* SelectGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788BBA2424A4EE00BC630D /* SelectGridView.swift */; };
-		C2F1C9D1242A1C8900699AAF /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F1C9D0242A1C8900699AAF /* Application.swift */; };
-		C2F1C9D3242A297200699AAF /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F1C9D2242A297200699AAF /* PhotoManager.swift */; };
+		C2F1C9D7242B9FD300699AAF /* SquareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F1C9D6242B9FD300699AAF /* SquareView.xib */; };
+		C2F1C9D9242BA22900699AAF /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F1C9D8242BA22900699AAF /* SquareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +34,8 @@
 		C2788BA8242272CA00BC630D /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		C2788BAE2422831D00BC630D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C2788BB0242375FC00BC630D /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
-		C2788BB62423DB0F00BC630D /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		C2788BBA2424A4EE00BC630D /* SelectGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGridView.swift; sourceTree = "<group>"; };
-		C2F1C9D0242A1C8900699AAF /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		C2F1C9D2242A297200699AAF /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
+		C2F1C9D6242B9FD300699AAF /* SquareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareView.xib; sourceTree = "<group>"; };
+		C2F1C9D8242BA22900699AAF /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +68,7 @@
 		C2788B9124226B7C00BC630D /* InstagridOC */ = {
 			isa = PBXGroup;
 			children = (
+				C2788BA024226B8300BC630D /* Info.plist */,
 				C2788BAA2422823F00BC630D /* Model */,
 				C2788BAC2422825200BC630D /* Controller */,
 				C2788BAB2422824800BC630D /* View */,
@@ -84,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				C2788BB0242375FC00BC630D /* Grid.swift */,
-				C2F1C9D2242A297200699AAF /* PhotoManager.swift */,
-				C2F1C9D0242A1C8900699AAF /* Application.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				C2788B9824226B7D00BC630D /* Main.storyboard */,
-				C2788BBA2424A4EE00BC630D /* SelectGridView.swift */,
-				C2788BB62423DB0F00BC630D /* GridView.swift */,
+				C2F1C9D6242B9FD300699AAF /* SquareView.xib */,
+				C2F1C9D8242BA22900699AAF /* SquareView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,7 +109,6 @@
 				C2788BAE2422831D00BC630D /* Default-568h@2x.png */,
 				C2788B9424226B7D00BC630D /* SceneDelegate.swift */,
 				C2788B9224226B7D00BC630D /* AppDelegate.swift */,
-				C2788BA024226B8300BC630D /* Info.plist */,
 				C2788BA8242272CA00BC630D /* ThirstySoftRegular.otf */,
 				C2788BA6242272BE00BC630D /* Delm-Medium.otf */,
 				C2788B9B24226B8300BC630D /* Assets.xcassets */,
@@ -184,6 +178,7 @@
 				C2788B9F24226B8300BC630D /* LaunchScreen.storyboard in Resources */,
 				C2788B9C24226B8300BC630D /* Assets.xcassets in Resources */,
 				C2788BA9242272CA00BC630D /* ThirstySoftRegular.otf in Resources */,
+				C2F1C9D7242B9FD300699AAF /* SquareView.xib in Resources */,
 				C2788BA7242272BE00BC630D /* Delm-Medium.otf in Resources */,
 				C2788B9A24226B7D00BC630D /* Main.storyboard in Resources */,
 				C2788BAF2422831D00BC630D /* Default-568h@2x.png in Resources */,
@@ -198,10 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2788BB1242375FC00BC630D /* Grid.swift in Sources */,
-				C2F1C9D1242A1C8900699AAF /* Application.swift in Sources */,
-				C2F1C9D3242A297200699AAF /* PhotoManager.swift in Sources */,
-				C2788BB72423DB0F00BC630D /* GridView.swift in Sources */,
-				C2788BBB2424A4EE00BC630D /* SelectGridView.swift in Sources */,
+				C2F1C9D9242BA22900699AAF /* SquareView.swift in Sources */,
 				C2788B9724226B7D00BC630D /* ViewController.swift in Sources */,
 				C2788B9324226B7D00BC630D /* AppDelegate.swift in Sources */,
 				C2788B9524226B7D00BC630D /* SceneDelegate.swift in Sources */,

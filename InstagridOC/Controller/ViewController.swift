@@ -8,54 +8,77 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var selectGridView: SelectGridView!
-    @IBOutlet weak var gridView: GridView!
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBAction func didSelectMiddleGrid() {
+    
+    @IBOutlet weak var squareView: SquareView!
+    @IBOutlet weak var firstLayoutButton: UIButton!
+    @IBOutlet weak var secondLayoutButton: UIButton!
+    @IBOutlet weak var thirdLayoutButton: UIButton!
+    @IBOutlet weak var firstGridSelectedImage: UIImageView!
+    @IBOutlet weak var secondGridSelectedImage: UIImageView!
+    @IBOutlet weak var thirdGridSelectedImage: UIImageView!
+    let image = UIImagePickerController()
+    
+    @IBAction func didTapFirstLayoutButton() {
         
-        middleGridSelected()
+        didSelectOneGrid(selected: firstGridSelectedImage, other: secondGridSelectedImage, last: thirdGridSelectedImage)
+        squareView.gridDisposition = .rectangleUp
     }
     
-    @IBAction func didSelectLeftGrid() {
+    @IBAction func didTapSecondLayoutButton() {
         
-        rightGridSelected()
+        didSelectOneGrid(selected: secondGridSelectedImage, other: firstGridSelectedImage, last: thirdGridSelectedImage)
+        squareView.gridDisposition = .rectangleDown
     }
     
-    
-    @IBAction func didSelectRightGrid() {
+    @IBAction func didTapThirdLayoutButton() {
         
-        leftGridSelected()
+        didSelectOneGrid(selected: thirdGridSelectedImage, other: firstGridSelectedImage, last: secondGridSelectedImage)
+        squareView.gridDisposition = .fullSquares
     }
     
-    private func middleGridSelected() {
-        
-        selectGridView.selectedImages[0].isHidden = false
-        selectGridView.selectedImages[1].isHidden = true
-        selectGridView.selectedImages[2].isHidden = true
-        
+    private func didSelectOneGrid(selected: UIImageView!, other: UIImageView!, last: UIImageView!) {
+        selected.isHidden = false
+        other.isHidden = true
+        last.isHidden = true
     }
     
-    private func leftGridSelected() {
-        
-        selectGridView.selectedImages[0].isHidden = true
-        selectGridView.selectedImages[1].isHidden = false
-        selectGridView.selectedImages[2].isHidden = true
-    }
-    
-    private func rightGridSelected() {
-        
-        selectGridView.selectedImages[0].isHidden = false
-        selectGridView.selectedImages[1].isHidden = true
-        selectGridView.selectedImages[2].isHidden = false
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let name = Notification.Name(rawValue: "ButtonTapped")
+        NotificationCenter.default.addObserver(self, selector: #selector(openUserLibrary),
+            name: name, object: nil)
+        
+        image.delegate = self
     }
-
-
+    
+    @objc func oneButtonTapped(gesture: UITapGestureRecognizer) {
+        openUserLibrary()
+    }
+    
+    @objc func openUserLibrary() {
+        if  UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+            image.modalPresentationStyle = .overCurrentContext
+            image.allowsEditing = false
+            image.sourceType = UIImagePickerController.SourceType.photoLibrary
+            self.present(image, animated: true, completion: nil)
+        }
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[.originalImage] as? UIImage {
+            squareView.selectedView?.image = pickedImage
+        }
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(oneButtonTapped(gesture:)))
+        squareView.selectedView?.addGestureRecognizer(tapGestureRecognizer)
+        dismiss(animated: true, completion: nil)
+        
+    }
 }
+
+
+
 

@@ -6,14 +6,10 @@
 //  Copyright © 2020 marwen. All rights reserved.
 //
 
-struct Grid {
-    
-    var disposition: Disposition
-    var photoUploaded = false 
-    
-    enum Disposition {
+
+enum Grid {
         
-        case down, up, plain
+        case rectangleUp, rectangleDown, fullSquares
     }
     
-}
+
