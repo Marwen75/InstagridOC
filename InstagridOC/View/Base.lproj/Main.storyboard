@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,11 +17,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstagridOC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6c5-t4-gx2">
-                                <rect key="frame" x="47.5" y="555" width="280" height="80"/>
+                                <rect key="frame" x="67" y="750" width="280" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e58-fY-027">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -65,28 +65,28 @@
                                 </constraints>
                             </stackView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="I6A-Xe-9EB">
-                                <rect key="frame" x="48" y="555" width="80" height="80"/>
+                                <rect key="frame" x="67.666666666666671" y="750" width="80.000000000000014" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="WhI-Fx-mym"/>
                                     <constraint firstAttribute="height" constant="80" id="jzG-sh-UVR"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="JAM-su-yoL">
-                                <rect key="frame" x="147.5" y="555" width="80" height="80"/>
+                                <rect key="frame" x="167" y="750" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="IMd-x4-59t"/>
                                     <constraint firstAttribute="height" constant="80" id="els-uI-yYd"/>
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="4Nc-7g-fzt">
-                                <rect key="frame" x="248" y="555" width="80" height="80"/>
+                                <rect key="frame" x="267.66666666666669" y="750" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="VPv-mM-cfg"/>
                                     <constraint firstAttribute="height" constant="80" id="kxa-xz-Fek"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBu-7D-yQG" customClass="SquareView" customModule="InstagridOC" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <rect key="frame" x="57" y="378.66666666666674" width="300" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="7kN-82-1id"/>
@@ -94,10 +94,9 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu4-ev-VV4">
-                                <rect key="frame" x="130.5" y="20" width="114.5" height="38"/>
+                                <rect key="frame" x="149.66666666666666" y="64" width="114.66666666666666" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="UE7-3W-ZIt"/>
-                                    <constraint firstAttribute="width" constant="114.5" id="pqk-9A-6Ic"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="29"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,9 +137,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Layout 1" width="27" height="27"/>
-        <image name="Layout 2" width="27" height="27"/>
-        <image name="Layout 3" width="27" height="27"/>
-        <image name="Selected" width="27" height="27"/>
+        <image name="Layout 1" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout 2" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout 3" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Selected" width="26.666666030883789" height="26.666666030883789"/>
     </resources>
 </document>

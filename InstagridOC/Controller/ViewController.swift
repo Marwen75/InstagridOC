@@ -50,7 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         squareView.gridDisposition = .rectangleDown
         let name = Notification.Name(rawValue: "ButtonTapped")
         NotificationCenter.default.addObserver(self, selector: #selector(openUserLibrary),
-            name: name, object: nil)
+                                               name: name, object: nil)
         
         image.delegate = self
     }
@@ -77,7 +77,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(photoWasTapped(gesture:)))
         squareView.selectedView?.addGestureRecognizer(tapGestureRecognizer)
         dismiss(animated: true, completion: nil)
-        
     }
 }
 
