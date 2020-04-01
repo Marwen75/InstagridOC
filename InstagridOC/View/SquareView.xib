@@ -10,20 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SquareView" customModule="InstagridOC" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="LlC-b6-YND"/>
-                <outlet property="lowerLeftSquareButton" destination="mO8-KH-DCf" id="dNg-wW-yxV"/>
-                <outlet property="lowerLeftSquareImage" destination="UAb-RA-WKM" id="d8x-e5-sNL"/>
-                <outlet property="lowerRectangleButton" destination="Sbg-Lk-a7q" id="JY3-ED-oua"/>
-                <outlet property="lowerRectangleImage" destination="5Ls-e7-B1l" id="Vfm-aa-M10"/>
-                <outlet property="lowerRightSquareButton" destination="vbV-3R-Dy4" id="PWT-oL-M3w"/>
-                <outlet property="lowerRightSquareImage" destination="p0g-j3-d3F" id="chg-TK-NNK"/>
-                <outlet property="lowerTwoSquareView" destination="m5F-Wb-cCZ" id="QnI-fi-LdG"/>
-                <outlet property="uperrLeftSquareImage" destination="pVy-fE-1C3" id="ye4-MH-tXn"/>
-                <outlet property="upperLeftSquareButton" destination="2Ln-Fs-y8a" id="Gz0-jN-pUW"/>
-                <outlet property="upperRectacngleImage" destination="qQp-7C-FPu" id="3rz-Mu-NlZ"/>
-                <outlet property="upperRectangleButton" destination="Pau-ga-XMU" id="1Dl-Hh-4Vp"/>
-                <outlet property="upperRightSquareButton" destination="9f2-GP-dgd" id="lrw-HH-qrs"/>
-                <outlet property="upperRightSquareImage" destination="TEb-4W-d0P" id="92a-ue-7M5"/>
-                <outlet property="upperTwoSquareView" destination="ZwL-E8-Pwg" id="YOz-tm-01x"/>
+                <outlet property="lowerTwoSquaresView" destination="cQb-Ks-Gco" id="Zhd-Mh-D1U"/>
+                <outlet property="upperTwoSquares" destination="W4m-Gg-zN3" id="2Ej-db-VVM"/>
+                <outletCollection property="customClassAllViews" destination="t8G-Gg-Cw7" collectionClass="NSMutableArray" id="rSQ-DP-4gP"/>
+                <outletCollection property="customClassAllViews" destination="o4K-lQ-brG" collectionClass="NSMutableArray" id="ZsW-Xn-syL"/>
+                <outletCollection property="customClassAllViews" destination="LRW-p8-ang" collectionClass="NSMutableArray" id="8ZV-0r-4Ey"/>
+                <outletCollection property="customClassAllViews" destination="UN6-Q8-Vh0" collectionClass="NSMutableArray" id="1OM-yv-EkC"/>
+                <outletCollection property="customClassAllViews" destination="8HP-nF-jXt" collectionClass="NSMutableArray" id="dxu-ps-bwX"/>
+                <outletCollection property="customClassAllViews" destination="Mhn-6n-MJy" collectionClass="NSMutableArray" id="WJ8-jq-Vhs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,139 +25,93 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZwL-E8-Pwg">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8G-Gg-Cw7" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
+                    <rect key="frame" x="15" y="157.5" width="270" height="127.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="270" id="7aj-xK-Hht"/>
+                        <constraint firstAttribute="height" constant="127.5" id="pKA-Pz-1ci"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4K-lQ-brG" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
+                    <rect key="frame" x="15" y="15" width="270" height="127.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="127.5" id="F4N-HP-ygr"/>
+                        <constraint firstAttribute="width" constant="270" id="yJe-r9-bIZ"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="W4m-Gg-zN3">
                     <rect key="frame" x="15" y="15" width="270" height="127.5"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pVy-fE-1C3">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRW-p8-ang" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="127.5" id="N2N-s6-G5U"/>
-                                <constraint firstAttribute="height" constant="127.5" id="s3l-dk-1nn"/>
+                                <constraint firstAttribute="width" constant="127.5" id="FIm-zK-tY7"/>
+                                <constraint firstAttribute="height" constant="127.5" id="i6n-fl-T0t"/>
                             </constraints>
-                        </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TEb-4W-d0P">
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN6-Q8-Vh0" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
                             <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="127.5" id="5jy-l4-GGb"/>
-                                <constraint firstAttribute="height" constant="127.5" id="OVa-Wm-AUH"/>
+                                <constraint firstAttribute="width" constant="127.5" id="BSz-NN-sib"/>
+                                <constraint firstAttribute="height" constant="127.5" id="FFA-7B-rsh"/>
+                                <constraint firstAttribute="width" secondItem="UN6-Q8-Vh0" secondAttribute="height" multiplier="1:1" id="WwR-7H-bkm"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127.5" id="nT0-co-7fi"/>
                             </constraints>
-                        </imageView>
+                        </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="TEb-4W-d0P" firstAttribute="leading" secondItem="pVy-fE-1C3" secondAttribute="trailing" constant="15" id="9ME-Bk-Zs2"/>
+                        <constraint firstItem="UN6-Q8-Vh0" firstAttribute="leading" secondItem="LRW-p8-ang" secondAttribute="trailing" constant="15" id="aek-1z-kms"/>
+                        <constraint firstItem="UN6-Q8-Vh0" firstAttribute="leading" secondItem="LRW-p8-ang" secondAttribute="trailing" constant="15" id="bGq-6I-Tuz"/>
                     </constraints>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="m5F-Wb-cCZ">
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-Ks-Gco">
                     <rect key="frame" x="15" y="157.5" width="270" height="127.5"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UAb-RA-WKM">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HP-nF-jXt" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="127.5" id="Rmb-Pr-cIA"/>
-                                <constraint firstAttribute="height" constant="127.5" id="cM5-0f-jzj"/>
+                                <constraint firstAttribute="width" constant="127.5" id="Fkv-4d-AWO"/>
+                                <constraint firstAttribute="height" constant="127.5" id="lxv-Wh-C0X"/>
                             </constraints>
-                        </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0g-j3-d3F">
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhn-6n-MJy" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
                             <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="127.5" id="IZ0-6N-VWt"/>
-                                <constraint firstAttribute="height" constant="127.5" id="lv6-xe-TMP"/>
+                                <constraint firstAttribute="width" constant="127.5" id="LFT-Sb-bTi"/>
+                                <constraint firstAttribute="height" constant="127.5" id="rZj-XS-YwM"/>
                             </constraints>
-                        </imageView>
+                        </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="p0g-j3-d3F" firstAttribute="leading" secondItem="UAb-RA-WKM" secondAttribute="trailing" constant="15" id="dJm-jS-423"/>
+                        <constraint firstItem="Mhn-6n-MJy" firstAttribute="leading" secondItem="8HP-nF-jXt" secondAttribute="trailing" constant="15" id="epw-yy-yqk"/>
+                        <constraint firstItem="Mhn-6n-MJy" firstAttribute="leading" secondItem="8HP-nF-jXt" secondAttribute="trailing" constant="15" id="pzU-sA-Guq"/>
                     </constraints>
                 </stackView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qQp-7C-FPu">
-                    <rect key="frame" x="15" y="15" width="270" height="127.5"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="127.5" id="bRJ-Bi-cIX"/>
-                    </constraints>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-e7-B1l">
-                    <rect key="frame" x="15" y="157.5" width="270" height="127.5"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="127.5" id="LaB-bz-nf9"/>
-                    </constraints>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pau-ga-XMU">
-                    <rect key="frame" x="130" y="58" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="Plus"/>
-                    <connections>
-                        <action selector="didTapUpperRectangleButton:" destination="-1" eventType="touchUpInside" id="xg3-6F-O4N"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-Lk-a7q">
-                    <rect key="frame" x="130" y="201" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="Plus"/>
-                    <connections>
-                        <action selector="didTapLowerRectangleButton:" destination="-1" eventType="touchUpInside" id="nn0-zr-L1j"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO8-KH-DCf">
-                    <rect key="frame" x="57" y="201" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="Plus"/>
-                    <connections>
-                        <action selector="didTapLowerLeftSquareButton:" destination="-1" eventType="touchUpInside" id="hsf-kO-8ed"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbV-3R-Dy4">
-                    <rect key="frame" x="201" y="201" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="Plus"/>
-                    <connections>
-                        <action selector="didTapLowerRightSquareButton:" destination="-1" eventType="touchUpInside" id="H56-jz-7BL"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f2-GP-dgd">
-                    <rect key="frame" x="201" y="58" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="Plus"/>
-                    <connections>
-                        <action selector="didTapUpperRightSquareButton:" destination="-1" eventType="touchUpInside" id="Bld-I0-eRK"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ln-Fs-y8a">
-                    <rect key="frame" x="57" y="58" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="Plus"/>
-                    <connections>
-                        <action selector="didTapUpperLeftSquareButton:" destination="-1" eventType="touchUpInside" id="pUh-YR-7rM"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.076848246159999994" green="0.39662730689999998" blue="0.59610676770000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="5Ls-e7-B1l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="4sw-t9-UYH"/>
-                <constraint firstItem="qQp-7C-FPu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="CKW-Ad-l9q"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qQp-7C-FPu" secondAttribute="trailing" constant="15" id="IZt-bp-lXk"/>
-                <constraint firstItem="5Ls-e7-B1l" firstAttribute="top" secondItem="qQp-7C-FPu" secondAttribute="bottom" constant="15" id="Ny3-P3-hzg"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Ls-e7-B1l" secondAttribute="trailing" constant="15" id="Oee-EP-HAF"/>
-                <constraint firstItem="m5F-Wb-cCZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="U2X-gv-v1g"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="m5F-Wb-cCZ" secondAttribute="bottom" constant="15" id="VfZ-WZ-BjH"/>
-                <constraint firstItem="ZwL-E8-Pwg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="cbp-mT-c78"/>
-                <constraint firstItem="qQp-7C-FPu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="mRX-0c-ngl"/>
-                <constraint firstAttribute="trailing" secondItem="m5F-Wb-cCZ" secondAttribute="trailing" constant="15" id="mcj-aF-ANv"/>
-                <constraint firstItem="ZwL-E8-Pwg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="qth-hx-iYi"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZwL-E8-Pwg" secondAttribute="trailing" constant="15" id="sfs-qt-fYt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5Ls-e7-B1l" secondAttribute="bottom" constant="15" id="vMD-uP-8ZG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="t8G-Gg-Cw7" secondAttribute="bottom" constant="15" id="3Uo-6f-jci"/>
+                <constraint firstItem="o4K-lQ-brG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="7hn-0l-Kkc"/>
+                <constraint firstItem="cQb-Ks-Gco" firstAttribute="top" secondItem="W4m-Gg-zN3" secondAttribute="bottom" constant="15" id="HOH-7g-yJl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cQb-Ks-Gco" secondAttribute="bottom" constant="15" id="Vuu-yw-gLT"/>
+                <constraint firstItem="o4K-lQ-brG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="d8h-dM-Rwg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="o4K-lQ-brG" secondAttribute="trailing" constant="15" id="f4g-Sf-KeQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="t8G-Gg-Cw7" secondAttribute="trailing" constant="15" id="fe0-9C-UX5"/>
+                <constraint firstItem="t8G-Gg-Cw7" firstAttribute="top" secondItem="o4K-lQ-brG" secondAttribute="bottom" constant="15" id="g7k-oe-VTQ"/>
+                <constraint firstItem="W4m-Gg-zN3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="jCs-JS-P3n"/>
+                <constraint firstItem="W4m-Gg-zN3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="n3m-dq-gXY"/>
+                <constraint firstItem="t8G-Gg-Cw7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="sKZ-ED-XqH"/>
+                <constraint firstItem="cQb-Ks-Gco" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="t1X-ni-JIg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="86.400000000000006" y="83.658170914542737"/>
         </view>
     </objects>
-    <resources>
-        <image name="Plus" width="13.5" height="13.5"/>
-    </resources>
 </document>

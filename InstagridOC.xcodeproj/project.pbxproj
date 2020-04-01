@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C25BD8622433F9FE00C6B25D /* ButtonAndImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25BD8612433F9FE00C6B25D /* ButtonAndImageView.xib */; };
+		C25BD8642433FA3C00C6B25D /* ButtonAndImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BD8632433FA3C00C6B25D /* ButtonAndImageView.swift */; };
 		C2788B9324226B7D00BC630D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788B9224226B7D00BC630D /* AppDelegate.swift */; };
 		C2788B9524226B7D00BC630D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788B9424226B7D00BC630D /* SceneDelegate.swift */; };
 		C2788B9724226B7D00BC630D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788B9624226B7D00BC630D /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C25BD8612433F9FE00C6B25D /* ButtonAndImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonAndImageView.xib; sourceTree = "<group>"; };
+		C25BD8632433FA3C00C6B25D /* ButtonAndImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAndImageView.swift; sourceTree = "<group>"; };
 		C2788B8F24226B7C00BC630D /* InstagridOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagridOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2788B9224226B7D00BC630D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2788B9424226B7D00BC630D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				C2788B9824226B7D00BC630D /* Main.storyboard */,
 				C2F1C9D6242B9FD300699AAF /* SquareView.xib */,
 				C2F1C9D8242BA22900699AAF /* SquareView.swift */,
+				C25BD8632433FA3C00C6B25D /* ButtonAndImageView.swift */,
+				C25BD8612433F9FE00C6B25D /* ButtonAndImageView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 				C2788B9C24226B8300BC630D /* Assets.xcassets in Resources */,
 				C2788BA9242272CA00BC630D /* ThirstySoftRegular.otf in Resources */,
 				C2F1C9D7242B9FD300699AAF /* SquareView.xib in Resources */,
+				C25BD8622433F9FE00C6B25D /* ButtonAndImageView.xib in Resources */,
 				C2788BA7242272BE00BC630D /* Delm-Medium.otf in Resources */,
 				C2788B9A24226B7D00BC630D /* Main.storyboard in Resources */,
 				C2788BAF2422831D00BC630D /* Default-568h@2x.png in Resources */,
@@ -196,6 +203,7 @@
 				C2F1C9D9242BA22900699AAF /* SquareView.swift in Sources */,
 				C2788B9724226B7D00BC630D /* ViewController.swift in Sources */,
 				C2788B9324226B7D00BC630D /* AppDelegate.swift in Sources */,
+				C25BD8642433FA3C00C6B25D /* ButtonAndImageView.swift in Sources */,
 				C2788B9524226B7D00BC630D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

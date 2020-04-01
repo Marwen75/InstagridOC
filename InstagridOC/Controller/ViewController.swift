@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController {
     
     
     @IBOutlet weak var squareView: SquareView!
@@ -54,28 +54,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         image.delegate = self
     }
-    
-    @objc func photoWasTapped(gesture: UITapGestureRecognizer) {
-        openUserLibrary()
-    }
+}
+    extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @objc func openUserLibrary() {
         if  UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-            image.modalPresentationStyle = .overCurrentContext
             image.allowsEditing = false
             image.sourceType = UIImagePickerController.SourceType.photoLibrary
             self.present(image, animated: true, completion: nil)
         }
     }
-    
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
-            squareView.selectedView?.image = pickedImage
-            squareView.selectedButton?.isHidden = true
+            squareView.buttonAndImageView.plusView.image = pickedImage
         }
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(photoWasTapped(gesture:)))
-        squareView.selectedView?.addGestureRecognizer(tapGestureRecognizer)
         dismiss(animated: true, completion: nil)
     }
 }

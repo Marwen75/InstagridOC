@@ -29,84 +29,14 @@ class SquareView: UIView {
         addSubview(view)
     }
     
-    var selectedView: UIImageView? = nil
-    var selectedButton: UIButton? = nil
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var upperTwoSquares: UIStackView!
+    @IBOutlet weak var lowerTwoSquaresView: UIStackView!
+    @IBOutlet var customClassAllViews: [ButtonAndImageView]!
+    var buttonAndImageView = ButtonAndImageView()
     
-    @IBOutlet weak var upperTwoSquareView: UIStackView!
-    
-    @IBOutlet weak var lowerTwoSquareView: UIStackView!
-    
-    @IBOutlet weak var uperrLeftSquareImage: UIImageView!
-    
-    @IBOutlet weak var upperRightSquareImage: UIImageView!
-    
-    @IBOutlet weak var lowerLeftSquareImage: UIImageView!
-    
-    @IBOutlet weak var lowerRightSquareImage: UIImageView!
-    
-    @IBOutlet weak var upperRectacngleImage: UIImageView!
-    
-    @IBOutlet weak var lowerRectangleImage: UIImageView!
-    
-    @IBOutlet weak var upperRectangleButton: UIButton!
-    
-    @IBOutlet weak var lowerRectangleButton: UIButton!
-    
-    @IBOutlet weak var lowerLeftSquareButton: UIButton!
-    
-    @IBOutlet weak var lowerRightSquareButton: UIButton!
-    
-    @IBOutlet weak var upperRightSquareButton: UIButton!
-    
-    @IBOutlet weak var upperLeftSquareButton: UIButton!
-    
-    
-    @IBAction func didTapUpperLeftSquareButton(_ sender: UIButton) {
-        selectedView = uperrLeftSquareImage
-        selectedButton = upperLeftSquareButton
-        oneSquareViewButtonTapped()
-    }
-    
-    @IBAction func didTapUpperRightSquareButton(_ sender: UIButton) {
-        selectedView = upperRightSquareImage
-        selectedButton = upperRightSquareButton
-        oneSquareViewButtonTapped()
-    }
-    
-    @IBAction func didTapLowerLeftSquareButton(_ sender: UIButton) {
-        selectedView = lowerLeftSquareImage
-        selectedButton = lowerLeftSquareButton
-        oneSquareViewButtonTapped()
-    }
-    
-    @IBAction func didTapLowerRightSquareButton(_ sender: UIButton) {
-        selectedView = lowerRightSquareImage
-        selectedButton = lowerRightSquareButton
-        oneSquareViewButtonTapped()
-    }
-    
-    @IBAction func didTapUpperRectangleButton(_ sender: UIButton) {
-        selectedView = upperRectacngleImage
-        selectedButton = upperRectangleButton
-        oneSquareViewButtonTapped()
-    }
-    
-    @IBAction func didTapLowerRectangleButton(_ sender: UIButton) {
-        selectedView = lowerRectangleImage
-        selectedButton = lowerRectangleButton
-        oneSquareViewButtonTapped()
-    }
-    
-    private func oneSquareViewButtonTapped() {
-        let name = Notification.Name(rawValue: "ButtonTapped")
-        let notification = Notification(name: name)
-        NotificationCenter.default.post(notification)
-    }
-    
-    
-    
+    // rectBas 0 / rectHaut 1 / carréHautgauche 2 / carréHautdr 3 / carrébasgauche 4 / carrébasdr 5
     
     enum GridDisposition {
         
@@ -125,38 +55,24 @@ class SquareView: UIView {
         switch gridDisposition {
         case .rectangleDown:
             
-            makeButtonsAppear(showThose: [lowerRectangleButton, upperLeftSquareButton, upperRightSquareButton], notThose: [upperRectangleButton, lowerLeftSquareButton, lowerRightSquareButton])
-            lowerRectangleImage.isHidden = false
-            upperTwoSquareView.isHidden = false
-            lowerTwoSquareView.isHidden = true
-            upperRectacngleImage.isHidden = true
+            upperTwoSquares.isHidden = false
+            lowerTwoSquaresView.isHidden = true
+            customClassAllViews[0].isHidden = false
+            customClassAllViews[1].isHidden = true
             
         case .fullSquares:
             
-            makeButtonsAppear(showThose: [lowerLeftSquareButton, upperRightSquareButton, lowerRightSquareButton, upperLeftSquareButton], notThose: [upperRectangleButton, lowerRectangleButton])
-            lowerRectangleImage.isHidden = true
-            upperTwoSquareView.isHidden = false
-            lowerTwoSquareView.isHidden = false
-            upperRectacngleImage.isHidden = true
+            upperTwoSquares.isHidden = false
+            lowerTwoSquaresView.isHidden = false
+            customClassAllViews[0].isHidden = true
+            customClassAllViews[1].isHidden = true
             
         case .rectangleUp:
             
-            makeButtonsAppear(showThose: [upperRectangleButton, lowerLeftSquareButton, lowerRightSquareButton], notThose: [lowerRectangleButton, upperRightSquareButton, upperLeftSquareButton])
-            lowerRectangleImage.isHidden = true
-            upperTwoSquareView.isHidden = true
-            lowerTwoSquareView.isHidden = false
-            upperRectacngleImage.isHidden = false
-        }
-    }
-    
-    private func makeButtonsAppear(showThose: [UIButton], notThose: [UIButton]) {
-        
-        
-        for button in showThose {
-            button.isHidden = false
-        }
-        for button in notThose {
-            button.isHidden = true
+            upperTwoSquares.isHidden = true
+            lowerTwoSquaresView.isHidden = false
+            customClassAllViews[0].isHidden = true
+            customClassAllViews[1].isHidden = false
         }
     }
 }
