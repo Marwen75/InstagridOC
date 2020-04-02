@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Outlets
     
     @IBOutlet weak var squareView: SquareView!
     @IBOutlet weak var firstLayoutButton: UIButton!
@@ -19,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondGridSelectedImage: UIImageView!
     @IBOutlet weak var thirdGridSelectedImage: UIImageView!
     let image = UIImagePickerController()
+    
+    // MARK: - Actions
     
     @IBAction func didTapFirstLayoutButton() {
         
@@ -45,17 +48,52 @@ class ViewController: UIViewController {
     }
     
     
+    // MARK: - Swipe Gesture Recognizer Settings
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         squareView.gridDisposition = .rectangleDown
         let name = Notification.Name(rawValue: "ButtonTapped")
         NotificationCenter.default.addObserver(self, selector: #selector(openUserLibrary),
                                                name: name, object: nil)
-        
         image.delegate = self
+        
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeSquareView(_:)))
+        squareView.addGestureRecognizer(swipeGestureRecognizer)
+    }
+    
+    @objc func swipeSquareView(_ sender: UISwipeGestureRecognizer) {
+        switch sender.state {
+        case .began, .changed:
+            transformSquareViewWith(gesture: sender)
+        case .ended, .cancelled:
+            print("cancelled")
+        default:
+            break
+        }
+    }
+    
+    private func transformSquareViewWith(gesture: UISwipeGestureRecognizer) {
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            gesture.direction = .left
+            let viewPosition = CGPoint(x: squareView.frame.origin.x - 50.0, y: squareView.frame.origin.y)
+            squareView.frame = CGRect(x: viewPosition.x, y: viewPosition.y, width: squareView.frame.size.width, height: squareView.frame.size.height)
+        } else {
+            gesture.direction = .up
+            let viewPosition = CGPoint(x: squareView.frame.origin.x, y: squareView.frame.origin.y)
+            squareView.frame = CGRect(x: viewPosition.x, y: viewPosition.y + 50.0, width: squareView.frame.size.width, height: squareView.frame.size.height)
+    }
     }
 }
-    extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+
+// MARK: - Extension
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     
     @objc func openUserLibrary() {
         if  UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
@@ -64,11 +102,10 @@ class ViewController: UIViewController {
             self.present(image, animated: true, completion: nil)
         }
     }
-
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[.originalImage] as? UIImage {
-            squareView.buttonAndImageView.plusView.image = pickedImage
-        }
+        guard let pickedImage = info[.originalImage] as? UIImage else { return }
+        squareView.buttonAndImageView.plusView.image = pickedImage
         dismiss(animated: true, completion: nil)
     }
 }
