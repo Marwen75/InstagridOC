@@ -20,7 +20,7 @@ class SquareView: UIView {
         loadViewFromNib()
     }
     
-    func loadViewFromNib() {
+        func loadViewFromNib() {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "SquareView", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
@@ -30,11 +30,12 @@ class SquareView: UIView {
     }
     
     
-    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var upperTwoSquares: UIStackView!
     @IBOutlet weak var lowerTwoSquaresView: UIStackView!
     @IBOutlet var customClassAllViews: [ButtonAndImageView]!
     var buttonAndImageView = ButtonAndImageView()
+    
     
     // rectBas 0 / rectHaut 1 / carréHautgauche 2 / carréHautdr 3 / carrébasgauche 4 / carrébasdr 5
     

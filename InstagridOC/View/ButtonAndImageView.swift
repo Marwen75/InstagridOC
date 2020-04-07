@@ -33,11 +33,10 @@ class ButtonAndImageView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!
-    @IBOutlet weak var plusView: UIImageView!
+
     
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        plusView.isHidden = false
         sendNotification()
     }
     
