@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C25BD8622433F9FE00C6B25D /* ButtonAndImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25BD8612433F9FE00C6B25D /* ButtonAndImageView.xib */; };
-		C25BD8642433FA3C00C6B25D /* ButtonAndImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BD8632433FA3C00C6B25D /* ButtonAndImageView.swift */; };
+		C2444D3C243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2444D3B243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift */; };
+		C2444D3E243FDF89003A0AD7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2444D3D243FDF89003A0AD7 /* UIImageExtension.swift */; };
+		C247B8F8243DD4BF00296BF5 /* LayoutChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C247B8F7243DD4BF00296BF5 /* LayoutChoiceView.xib */; };
+		C247B8FA243DD4E100296BF5 /* LayoutChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C247B8F9243DD4E100296BF5 /* LayoutChoiceView.swift */; };
+		C25BD8622433F9FE00C6B25D /* AddPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25BD8612433F9FE00C6B25D /* AddPhotoView.xib */; };
+		C25BD8642433FA3C00C6B25D /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BD8632433FA3C00C6B25D /* AddPhotoView.swift */; };
 		C2788B9324226B7D00BC630D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788B9224226B7D00BC630D /* AppDelegate.swift */; };
 		C2788B9524226B7D00BC630D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788B9424226B7D00BC630D /* SceneDelegate.swift */; };
 		C2788B9724226B7D00BC630D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788B9624226B7D00BC630D /* ViewController.swift */; };
@@ -18,14 +22,17 @@
 		C2788BA7242272BE00BC630D /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2788BA6242272BE00BC630D /* Delm-Medium.otf */; };
 		C2788BA9242272CA00BC630D /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2788BA8242272CA00BC630D /* ThirstySoftRegular.otf */; };
 		C2788BAF2422831D00BC630D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2788BAE2422831D00BC630D /* Default-568h@2x.png */; };
-		C2788BB1242375FC00BC630D /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2788BB0242375FC00BC630D /* Grid.swift */; };
 		C2F1C9D7242B9FD300699AAF /* SquareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F1C9D6242B9FD300699AAF /* SquareView.xib */; };
 		C2F1C9D9242BA22900699AAF /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F1C9D8242BA22900699AAF /* SquareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C25BD8612433F9FE00C6B25D /* ButtonAndImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonAndImageView.xib; sourceTree = "<group>"; };
-		C25BD8632433FA3C00C6B25D /* ButtonAndImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAndImageView.swift; sourceTree = "<group>"; };
+		C2444D3B243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Viewcontroller+OpenUserLibrary.swift"; sourceTree = "<group>"; };
+		C2444D3D243FDF89003A0AD7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		C247B8F7243DD4BF00296BF5 /* LayoutChoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutChoiceView.xib; sourceTree = "<group>"; };
+		C247B8F9243DD4E100296BF5 /* LayoutChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutChoiceView.swift; sourceTree = "<group>"; };
+		C25BD8612433F9FE00C6B25D /* AddPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPhotoView.xib; sourceTree = "<group>"; };
+		C25BD8632433FA3C00C6B25D /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		C2788B8F24226B7C00BC630D /* InstagridOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagridOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2788B9224226B7D00BC630D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2788B9424226B7D00BC630D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +44,6 @@
 		C2788BA6242272BE00BC630D /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		C2788BA8242272CA00BC630D /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		C2788BAE2422831D00BC630D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C2788BB0242375FC00BC630D /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		C2F1C9D6242B9FD300699AAF /* SquareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareView.xib; sourceTree = "<group>"; };
 		C2F1C9D8242BA22900699AAF /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2444D3A243FDDDE003A0AD7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2444D3B243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift */,
+				C2444D3D243FDF89003A0AD7 /* UIImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C2788B8624226B7C00BC630D = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +91,7 @@
 				C2788BAA2422823F00BC630D /* Model */,
 				C2788BAC2422825200BC630D /* Controller */,
 				C2788BAB2422824800BC630D /* View */,
+				C2444D3A243FDDDE003A0AD7 /* Extensions */,
 				C2788BAD2422826200BC630D /* Supporting Files */,
 			);
 			path = InstagridOC;
@@ -84,7 +100,6 @@
 		C2788BAA2422823F00BC630D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C2788BB0242375FC00BC630D /* Grid.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,8 +110,10 @@
 				C2788B9824226B7D00BC630D /* Main.storyboard */,
 				C2F1C9D6242B9FD300699AAF /* SquareView.xib */,
 				C2F1C9D8242BA22900699AAF /* SquareView.swift */,
-				C25BD8632433FA3C00C6B25D /* ButtonAndImageView.swift */,
-				C25BD8612433F9FE00C6B25D /* ButtonAndImageView.xib */,
+				C247B8F9243DD4E100296BF5 /* LayoutChoiceView.swift */,
+				C247B8F7243DD4BF00296BF5 /* LayoutChoiceView.xib */,
+				C25BD8632433FA3C00C6B25D /* AddPhotoView.swift */,
+				C25BD8612433F9FE00C6B25D /* AddPhotoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,11 +198,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C247B8F8243DD4BF00296BF5 /* LayoutChoiceView.xib in Resources */,
 				C2788B9F24226B8300BC630D /* LaunchScreen.storyboard in Resources */,
 				C2788B9C24226B8300BC630D /* Assets.xcassets in Resources */,
 				C2788BA9242272CA00BC630D /* ThirstySoftRegular.otf in Resources */,
 				C2F1C9D7242B9FD300699AAF /* SquareView.xib in Resources */,
-				C25BD8622433F9FE00C6B25D /* ButtonAndImageView.xib in Resources */,
+				C25BD8622433F9FE00C6B25D /* AddPhotoView.xib in Resources */,
 				C2788BA7242272BE00BC630D /* Delm-Medium.otf in Resources */,
 				C2788B9A24226B7D00BC630D /* Main.storyboard in Resources */,
 				C2788BAF2422831D00BC630D /* Default-568h@2x.png in Resources */,
@@ -199,12 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2788BB1242375FC00BC630D /* Grid.swift in Sources */,
+				C247B8FA243DD4E100296BF5 /* LayoutChoiceView.swift in Sources */,
 				C2F1C9D9242BA22900699AAF /* SquareView.swift in Sources */,
 				C2788B9724226B7D00BC630D /* ViewController.swift in Sources */,
 				C2788B9324226B7D00BC630D /* AppDelegate.swift in Sources */,
-				C25BD8642433FA3C00C6B25D /* ButtonAndImageView.swift in Sources */,
+				C2444D3E243FDF89003A0AD7 /* UIImageExtension.swift in Sources */,
+				C25BD8642433FA3C00C6B25D /* AddPhotoView.swift in Sources */,
 				C2788B9524226B7D00BC630D /* SceneDelegate.swift in Sources */,
+				C2444D3C243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

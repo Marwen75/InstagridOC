@@ -12,8 +12,6 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="LlC-b6-YND"/>
                 <outlet property="lowerTwoSquaresView" destination="cQb-Ks-Gco" id="Zhd-Mh-D1U"/>
                 <outlet property="upperTwoSquares" destination="W4m-Gg-zN3" id="2Ej-db-VVM"/>
-                <outletCollection property="customClassAllViews" destination="t8G-Gg-Cw7" collectionClass="NSMutableArray" id="rSQ-DP-4gP"/>
-                <outletCollection property="customClassAllViews" destination="o4K-lQ-brG" collectionClass="NSMutableArray" id="ZsW-Xn-syL"/>
                 <outletCollection property="customClassAllViews" destination="LRW-p8-ang" collectionClass="NSMutableArray" id="8ZV-0r-4Ey"/>
                 <outletCollection property="customClassAllViews" destination="UN6-Q8-Vh0" collectionClass="NSMutableArray" id="1OM-yv-EkC"/>
                 <outletCollection property="customClassAllViews" destination="8HP-nF-jXt" collectionClass="NSMutableArray" id="dxu-ps-bwX"/>
@@ -25,74 +23,49 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8G-Gg-Cw7" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
-                    <rect key="frame" x="15" y="157.5" width="270" height="127.5"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </view>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4K-lQ-brG" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
-                    <rect key="frame" x="15" y="15" width="270" height="127.5"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="W4m-Gg-zN3">
                     <rect key="frame" x="15" y="15" width="270" height="127.5"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRW-p8-ang" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRW-p8-ang" customClass="AddPhotoView" customModule="InstagridOC" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN6-Q8-Vh0" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
-                            <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="UN6-Q8-Vh0" secondAttribute="height" multiplier="1:1" id="WwR-7H-bkm"/>
+                                <constraint firstAttribute="width" secondItem="LRW-p8-ang" secondAttribute="height" multiplier="1:1" id="ax9-WE-aWS"/>
                             </constraints>
                         </view>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="UN6-Q8-Vh0" firstAttribute="leading" secondItem="LRW-p8-ang" secondAttribute="trailing" constant="15" id="aek-1z-kms"/>
-                        <constraint firstItem="UN6-Q8-Vh0" firstAttribute="leading" secondItem="LRW-p8-ang" secondAttribute="trailing" constant="15" id="bGq-6I-Tuz"/>
-                        <constraint firstItem="LRW-p8-ang" firstAttribute="centerY" secondItem="W4m-Gg-zN3" secondAttribute="centerY" id="mdp-Ot-W4r"/>
-                    </constraints>
-                </stackView>
-                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-Ks-Gco">
-                    <rect key="frame" x="15" y="157.5" width="270" height="127.5"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HP-nF-jXt" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhn-6n-MJy" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN6-Q8-Vh0" customClass="AddPhotoView" customModule="InstagridOC" customModuleProvider="target">
                             <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="8HP-nF-jXt" firstAttribute="centerY" secondItem="cQb-Ks-Gco" secondAttribute="centerY" id="6fH-oj-88V"/>
-                        <constraint firstItem="Mhn-6n-MJy" firstAttribute="leading" secondItem="8HP-nF-jXt" secondAttribute="trailing" constant="15" id="epw-yy-yqk"/>
-                        <constraint firstItem="Mhn-6n-MJy" firstAttribute="leading" secondItem="8HP-nF-jXt" secondAttribute="trailing" constant="15" id="pzU-sA-Guq"/>
-                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-Ks-Gco">
+                    <rect key="frame" x="15" y="157.5" width="270" height="127.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HP-nF-jXt" customClass="AddPhotoView" customModule="InstagridOC" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="8HP-nF-jXt" secondAttribute="height" multiplier="1:1" id="mj7-VE-WAU"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhn-6n-MJy" customClass="AddPhotoView" customModule="InstagridOC" customModuleProvider="target">
+                            <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.076848246159999994" green="0.39662730689999998" blue="0.59610676770000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="t8G-Gg-Cw7" secondAttribute="bottom" constant="15" id="3Uo-6f-jci"/>
-                <constraint firstItem="o4K-lQ-brG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="7hn-0l-Kkc"/>
-                <constraint firstItem="cQb-Ks-Gco" firstAttribute="top" secondItem="W4m-Gg-zN3" secondAttribute="bottom" constant="15" id="HOH-7g-yJl"/>
-                <constraint firstItem="cQb-Ks-Gco" firstAttribute="top" secondItem="o4K-lQ-brG" secondAttribute="bottom" constant="15" id="Hbs-Jw-26L"/>
-                <constraint firstItem="t8G-Gg-Cw7" firstAttribute="leading" secondItem="W4m-Gg-zN3" secondAttribute="leading" id="RSo-d7-55q"/>
+                <constraint firstItem="W4m-Gg-zN3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0YP-IY-nJa"/>
+                <constraint firstItem="cQb-Ks-Gco" firstAttribute="top" secondItem="W4m-Gg-zN3" secondAttribute="bottom" constant="15" id="6Ny-C8-I1A"/>
+                <constraint firstItem="cQb-Ks-Gco" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HmJ-Aq-xKs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cQb-Ks-Gco" secondAttribute="bottom" constant="15" id="Vuu-yw-gLT"/>
-                <constraint firstItem="W4m-Gg-zN3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cHP-4a-GoF"/>
-                <constraint firstItem="t8G-Gg-Cw7" firstAttribute="trailing" secondItem="W4m-Gg-zN3" secondAttribute="trailing" id="d2b-Y6-hOz"/>
-                <constraint firstItem="o4K-lQ-brG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="d8h-dM-Rwg"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="o4K-lQ-brG" secondAttribute="trailing" constant="15" id="f4g-Sf-KeQ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="t8G-Gg-Cw7" secondAttribute="trailing" constant="15" id="fe0-9C-UX5"/>
-                <constraint firstItem="t8G-Gg-Cw7" firstAttribute="top" secondItem="o4K-lQ-brG" secondAttribute="bottom" constant="15" id="g7k-oe-VTQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="W4m-Gg-zN3" secondAttribute="trailing" constant="15" id="cXx-pn-yT4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cQb-Ks-Gco" secondAttribute="trailing" constant="15" id="eUF-LH-yz3"/>
                 <constraint firstItem="W4m-Gg-zN3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="jCs-JS-P3n"/>
-                <constraint firstItem="cQb-Ks-Gco" firstAttribute="leading" secondItem="o4K-lQ-brG" secondAttribute="leading" id="khg-1Q-VED"/>
                 <constraint firstItem="W4m-Gg-zN3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="n3m-dq-gXY"/>
-                <constraint firstItem="t8G-Gg-Cw7" firstAttribute="top" secondItem="W4m-Gg-zN3" secondAttribute="bottom" constant="15" id="red-bM-JDM"/>
-                <constraint firstItem="cQb-Ks-Gco" firstAttribute="trailing" secondItem="o4K-lQ-brG" secondAttribute="trailing" id="sDA-sq-Axk"/>
-                <constraint firstItem="t8G-Gg-Cw7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="sKZ-ED-XqH"/>
                 <constraint firstItem="cQb-Ks-Gco" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="t1X-ni-JIg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

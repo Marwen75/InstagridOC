@@ -29,15 +29,15 @@ class SquareView: UIView {
         addSubview(view)
     }
     
+    // outlets
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var upperTwoSquares: UIStackView!
     @IBOutlet weak var lowerTwoSquaresView: UIStackView!
-    @IBOutlet var customClassAllViews: [ButtonAndImageView]!
-    var buttonAndImageView = ButtonAndImageView()
+    @IBOutlet var customClassAllViews: [AddPhotoView]!
     
     
-    // rectBas 0 / rectHaut 1 / carréHautgauche 2 / carréHautdr 3 / carrébasgauche 4 / carrébasdr 5
+    //  carréHautgauche 0 / carréHautdr 1 / carrébasgauche 2 / carrébasdr 3
     
     enum GridDisposition {
         
@@ -55,25 +55,15 @@ class SquareView: UIView {
         
         switch gridDisposition {
         case .rectangleDown:
-            
-            upperTwoSquares.isHidden = false
-            lowerTwoSquaresView.isHidden = true
+            customClassAllViews[2].isHidden = true
             customClassAllViews[0].isHidden = false
-            customClassAllViews[1].isHidden = true
             
         case .fullSquares:
-            
-            upperTwoSquares.isHidden = false
-            lowerTwoSquaresView.isHidden = false
-            customClassAllViews[0].isHidden = true
-            customClassAllViews[1].isHidden = true
+            customClassAllViews.forEach { $0.isHidden = false }
             
         case .rectangleUp:
-            
-            upperTwoSquares.isHidden = true
-            lowerTwoSquaresView.isHidden = false
             customClassAllViews[0].isHidden = true
-            customClassAllViews[1].isHidden = false
+            customClassAllViews[2].isHidden = false
         }
     }
 }

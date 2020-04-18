@@ -8,7 +8,7 @@
 
 import UIKit
 @IBDesignable
-class ButtonAndImageView: UIView {
+class AddPhotoView: UIView {
 
    required init?(coder aDecoder: NSCoder) {
           super.init(coder: aDecoder)
@@ -22,7 +22,7 @@ class ButtonAndImageView: UIView {
       
       func loadViewFromNib() {
           let bundle = Bundle(for: type(of: self))
-          let nib = UINib(nibName: "ButtonAndImageView", bundle: bundle)
+          let nib = UINib(nibName: "AddPhotoView", bundle: bundle)
           let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
           view.frame = bounds
           view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -34,15 +34,12 @@ class ButtonAndImageView: UIView {
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!
 
+    var addPhotoButtonTapped: (() -> Void)? = nil
+    var setImageView: (() -> ())? = nil
     
-    
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        sendNotification()
+    @IBAction func buttonTapped(_ sender: Any) {
+        addPhotoButtonTapped?()
+        setImageView?()
     }
     
-    private func sendNotification() {
-           let name = Notification.Name(rawValue: "ButtonTapped")
-           let notification = Notification(name: name)
-           NotificationCenter.default.post(notification)
-    }
 }

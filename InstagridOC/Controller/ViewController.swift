@@ -10,69 +10,80 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // MARK: - Outlets
+    // MARK: - Outlets and Properties
     
     @IBOutlet weak var squareView: SquareView!
-    @IBOutlet weak var firstLayoutButton: UIButton!
-    @IBOutlet weak var secondLayoutButton: UIButton!
-    @IBOutlet weak var thirdLayoutButton: UIButton!
-    @IBOutlet weak var firstGridSelectedImage: UIImageView!
-    @IBOutlet weak var secondGridSelectedImage: UIImageView!
-    @IBOutlet weak var thirdGridSelectedImage: UIImageView!
-    
-    @IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
-    
-    
+    @IBOutlet var allLayoutChoiceView: [LayoutChoiceView]!
+    var imageToChange: UIImageView? = nil
     let image = UIImagePickerController()
+    var swipeGestureRecognizer: UISwipeGestureRecognizer?
     
-    // MARK: - Actions
+    // MARK: - ViewDidLoad
     
-    @IBAction func didTapFirstLayoutButton() {
-        
-        didSelectOneGrid(selected: firstGridSelectedImage, other: secondGridSelectedImage, last: thirdGridSelectedImage)
-        squareView.gridDisposition = .rectangleUp
-    }
-    
-    @IBAction func didTapSecondLayoutButton() {
-        
-        didSelectOneGrid(selected: secondGridSelectedImage, other: firstGridSelectedImage, last: thirdGridSelectedImage)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         squareView.gridDisposition = .rectangleDown
+        assignBackgroundImages()
+        squareView.customClassAllViews.forEach { $0.addPhotoButtonTapped = { self.openUserLibrary()}}
+        assignImagesToChange(firstView: self.squareView.customClassAllViews[0], secondView: self.squareView.customClassAllViews[1], thirdView: squareView.customClassAllViews[2], fourthView: squareView.customClassAllViews[3])
+        self.sortLayoutChoiceView()
+        image.delegate = self
+        swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(setAnimationForLeftAndUpSwipes))
+        guard let swipeGestureRecognizer = swipeGestureRecognizer else {return}
+        squareView.addGestureRecognizer(swipeGestureRecognizer)
+        assignDirectionToTheSwipe()
+        NotificationCenter.default.addObserver(self, selector: #selector(assignDirectionToTheSwipe), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
-    @IBAction func didTapThirdLayoutButton() {
-        
-        didSelectOneGrid(selected: thirdGridSelectedImage, other: firstGridSelectedImage, last: secondGridSelectedImage)
-        squareView.gridDisposition = .fullSquares
+    // MARK: - LayoutChoiceView and AddPhotoView Settings
+    
+    private func assignBackgroundImages() {
+        allLayoutChoiceView[1].seletedImage.isHidden = false
+        allLayoutChoiceView[0].layoutButton.setBackgroundImage(UIImage(named: "Layout 1"), for: .normal)
+        allLayoutChoiceView[1].layoutButton.setBackgroundImage(UIImage(named: "Layout 2"), for: .normal)
+        allLayoutChoiceView[2].layoutButton.setBackgroundImage(UIImage(named: "Layout 3"), for: .normal)
     }
     
-    private func didSelectOneGrid(selected: UIImageView!, other: UIImageView!, last: UIImageView!) {
-        selected.isHidden = false
-        other.isHidden = true
-        last.isHidden = true
+    private func assignImagesToChange(firstView: AddPhotoView, secondView: AddPhotoView, thirdView: AddPhotoView, fourthView: AddPhotoView) {
+        firstView.setImageView = { self.imageToChange = firstView.photoView }
+        secondView.setImageView = { self.imageToChange = secondView.photoView }
+        thirdView.setImageView = { self.imageToChange = thirdView.photoView }
+        fourthView.setImageView = { self.imageToChange = fourthView.photoView }
+    }
+    
+    private func sortLayoutChoiceView() {
+        allLayoutChoiceView[0].didTap = {self.showSelectedGrid(selected: self.allLayoutChoiceView[0], other: self.allLayoutChoiceView[1], last: self.allLayoutChoiceView[2])
+            self.squareView.gridDisposition = .rectangleUp}
+        allLayoutChoiceView[1].didTap = {self.showSelectedGrid(selected: self.allLayoutChoiceView[1], other: self.allLayoutChoiceView[2], last: self.allLayoutChoiceView[0])
+            self.squareView.gridDisposition = .rectangleDown}
+        allLayoutChoiceView[2].didTap = {self.showSelectedGrid(selected: self.allLayoutChoiceView[2], other: self.allLayoutChoiceView[0], last: self.allLayoutChoiceView[1])
+            self.squareView.gridDisposition = .fullSquares}
+    }
+    
+    
+    private func showSelectedGrid(selected: LayoutChoiceView, other: LayoutChoiceView, last: LayoutChoiceView) {
+        selected.seletedImage.isHidden = false
+        other.seletedImage.isHidden = true
+        last.seletedImage.isHidden = true
     }
     
     
     // MARK: - Swipe Gesture Recognizer Settings
     
-    @IBAction func swipeGestureRecognizer(_ sender: UISwipeGestureRecognizer) {
-        assignDirectionToTheSwipe(gesture: sender)
-        setAnimationForLeftAndUpSwipes()
-    }
-    
-    private func setAnimationForLeftAndUpSwipes() {
-        if swipeGestureRecognizer.direction == .up {
-            squareViewSwipeAnimation(duration: 0.3, x: 0, y: -view.frame.height, ifNotCancelled: openActivityController)
-        } else if swipeGestureRecognizer.direction == .left {
-            squareViewSwipeAnimation(duration: 0.3, x: -view.frame.height, y: 0, ifNotCancelled: openActivityController)
+    @objc private func setAnimationForLeftAndUpSwipes() {
+        if swipeGestureRecognizer?.direction == .up {
+            squareViewSwipeAnimation(duration: 0.3, x: 0, y: -view.frame.height, succeed: openActivityController)
+        } else {
+            squareViewSwipeAnimation(duration: 0.3, x: -view.frame.width, y: 0, succeed: openActivityController)
         }
     }
     
-    private func squareViewSwipeAnimation(duration: Double, x: CGFloat, y: CGFloat, ifNotCancelled: @escaping () -> Void) {
+    private func squareViewSwipeAnimation(duration: Double, x: CGFloat, y: CGFloat, succeed: @escaping () -> Void) {
         UIView.animate(withDuration: duration, animations: {
             self.squareView.transform = CGAffineTransform(translationX: x, y: y)
         }, completion:  { (success) in
             if success {
-                ifNotCancelled()
+                succeed()
             }
         })
     }
@@ -83,11 +94,11 @@ class ViewController: UIViewController {
         })
     }
     
-    private func assignDirectionToTheSwipe(gesture: UISwipeGestureRecognizer) {
+    @objc private func assignDirectionToTheSwipe() {
         if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-            gesture.direction = .left
+            swipeGestureRecognizer?.direction = .left
         } else {
-            gesture.direction = .up
+            swipeGestureRecognizer?.direction = .up
         }
     }
     
@@ -96,57 +107,15 @@ class ViewController: UIViewController {
     private func openActivityController() {
         let userImageToShare = [UIImage.init(view: squareView)]
         let activityController = UIActivityViewController(activityItems: userImageToShare as [Any], applicationActivities: nil)
-            present(activityController, animated: true)
+        present(activityController, animated: true)
         activityController.completionWithItemsHandler = { activiy, completed, items, Error in
             self.reverseSquareViewSwipeAnimation()
         }
     }
-    
-    // MARK: - ViewDidLoad
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //squareView.gridDisposition = .rectangleDown
-        let name = Notification.Name(rawValue: "ButtonTapped")
-        NotificationCenter.default.addObserver(self, selector: #selector(openUserLibrary),
-                                               name: name, object: nil)
-        image.delegate = self
-    }
 }
 
 
-// MARK: - Extension
 
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    
-    @objc func openUserLibrary() {
-        if  UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-            image.allowsEditing = false
-            image.sourceType = UIImagePickerController.SourceType.photoLibrary
-            self.present(image, animated: true, completion: nil)
-        }
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[.originalImage] as? UIImage {
-            squareView.buttonAndImageView.photoView.image = pickedImage
-            dismiss(animated: true, completion: nil)
-        }
-    }
-}
-
-extension UIImage{
-    convenience init(view: UIView) {
-
-    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
-    view.drawHierarchy(in: view.bounds, afterScreenUpdates: false)
-    let image = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-    self.init(cgImage: (image?.cgImage)!)
-
-  }
-}
 
 
 
