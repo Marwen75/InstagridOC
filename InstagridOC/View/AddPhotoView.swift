@@ -9,31 +9,21 @@
 import UIKit
 @IBDesignable
 class AddPhotoView: UIView {
-
-   required init?(coder aDecoder: NSCoder) {
-          super.init(coder: aDecoder)
-          loadViewFromNib()
-      }
-      
-      override init(frame: CGRect) {
-          super.init(frame: frame)
-          loadViewFromNib()
-      }
-      
-      func loadViewFromNib() {
-          let bundle = Bundle(for: type(of: self))
-          let nib = UINib(nibName: "AddPhotoView", bundle: bundle)
-          let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
-          view.frame = bounds
-          view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-          addSubview(view)
-      }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        loadViewFromNib(name: "AddPhotoView")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        loadViewFromNib(name: "AddPhotoView")
+    }
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!
-
+    
     var addPhotoButtonTapped: ((UIImageView) -> Void)? = nil
     
     @IBAction func buttonTapped(_ sender: Any) {

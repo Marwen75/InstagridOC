@@ -12,21 +12,12 @@ class LayoutChoiceView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
-            loadViewFromNib()
+        loadViewFromNib(name: "LayoutChoiceView")
         }
         
         override init(frame: CGRect) {
             super.init(frame: frame)
-            loadViewFromNib()
-        }
-        
-        func loadViewFromNib() {
-            let bundle = Bundle(for: type(of: self))
-            let nib = UINib(nibName: "LayoutChoiceView", bundle: bundle)
-            let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
-            view.frame = bounds
-            view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            addSubview(view)
+            loadViewFromNib(name: "LayoutChoiceView")
         }
     
     @IBOutlet var contentView: UIView!

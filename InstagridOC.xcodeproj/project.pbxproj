@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20A0DD8244FCB93000AA670 /* UIViewExtension+NibInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20A0DD7244FCB93000AA670 /* UIViewExtension+NibInit.swift */; };
 		C2444D3C243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2444D3B243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift */; };
 		C2444D3E243FDF89003A0AD7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2444D3D243FDF89003A0AD7 /* UIImageExtension.swift */; };
 		C247B8F8243DD4BF00296BF5 /* LayoutChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C247B8F7243DD4BF00296BF5 /* LayoutChoiceView.xib */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C20A0DD7244FCB93000AA670 /* UIViewExtension+NibInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewExtension+NibInit.swift"; sourceTree = "<group>"; };
 		C2444D3B243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Viewcontroller+OpenUserLibrary.swift"; sourceTree = "<group>"; };
 		C2444D3D243FDF89003A0AD7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C247B8F7243DD4BF00296BF5 /* LayoutChoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutChoiceView.xib; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				C2444D3B243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift */,
+				C20A0DD7244FCB93000AA670 /* UIViewExtension+NibInit.swift */,
 				C2444D3D243FDF89003A0AD7 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
@@ -88,20 +91,12 @@
 			isa = PBXGroup;
 			children = (
 				C2788BA024226B8300BC630D /* Info.plist */,
-				C2788BAA2422823F00BC630D /* Model */,
 				C2788BAC2422825200BC630D /* Controller */,
 				C2788BAB2422824800BC630D /* View */,
 				C2444D3A243FDDDE003A0AD7 /* Extensions */,
 				C2788BAD2422826200BC630D /* Supporting Files */,
 			);
 			path = InstagridOC;
-			sourceTree = "<group>";
-		};
-		C2788BAA2422823F00BC630D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C2788BAB2422824800BC630D /* View */ = {
@@ -225,6 +220,7 @@
 				C25BD8642433FA3C00C6B25D /* AddPhotoView.swift in Sources */,
 				C2788B9524226B7D00BC630D /* SceneDelegate.swift in Sources */,
 				C2444D3C243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift in Sources */,
+				C20A0DD8244FCB93000AA670 /* UIViewExtension+NibInit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
