@@ -12,9 +12,9 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     
     func openUserLibrary() {
         if   UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-            image.allowsEditing = false
-            image.sourceType = UIImagePickerController.SourceType.photoLibrary
-            self.present(image, animated: true, completion: nil)
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     

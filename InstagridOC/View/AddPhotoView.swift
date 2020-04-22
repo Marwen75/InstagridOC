@@ -34,12 +34,10 @@ class AddPhotoView: UIView {
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!
 
-    var addPhotoButtonTapped: (() -> Void)? = nil
-    var setImageView: (() -> ())? = nil
+    var addPhotoButtonTapped: ((UIImageView) -> Void)? = nil
     
     @IBAction func buttonTapped(_ sender: Any) {
-        addPhotoButtonTapped?()
-        setImageView?()
+        addPhotoButtonTapped?(photoView)
     }
     
 }

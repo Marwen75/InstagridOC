@@ -20,7 +20,7 @@ class SquareView: UIView {
         loadViewFromNib()
     }
     
-        func loadViewFromNib() {
+    func loadViewFromNib() {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "SquareView", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView

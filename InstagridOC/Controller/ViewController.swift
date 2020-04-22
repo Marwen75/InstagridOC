@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var squareView: SquareView!
     @IBOutlet var allLayoutChoiceView: [LayoutChoiceView]!
     var imageToChange: UIImageView? = nil
-    let image = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
     var swipeGestureRecognizer: UISwipeGestureRecognizer?
     
     // MARK: - ViewDidLoad
@@ -24,10 +24,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         squareView.gridDisposition = .rectangleDown
         assignBackgroundImages()
-        squareView.customClassAllViews.forEach { $0.addPhotoButtonTapped = { self.openUserLibrary()}}
-        assignImagesToChange(firstView: self.squareView.customClassAllViews[0], secondView: self.squareView.customClassAllViews[1], thirdView: squareView.customClassAllViews[2], fourthView: squareView.customClassAllViews[3])
-        self.sortLayoutChoiceView()
-        image.delegate = self
+        squareView.customClassAllViews.forEach { $0.addPhotoButtonTapped = { photoView in
+            self.openUserLibrary()
+            self.imageToChange = photoView
+            }
+        }
+        self.sortLayoutChoiceViews()
+        imagePicker.delegate = self
         swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(setAnimationForLeftAndUpSwipes))
         guard let swipeGestureRecognizer = swipeGestureRecognizer else {return}
         squareView.addGestureRecognizer(swipeGestureRecognizer)
@@ -39,34 +42,35 @@ class ViewController: UIViewController {
     
     private func assignBackgroundImages() {
         allLayoutChoiceView[1].seletedImage.isHidden = false
-        allLayoutChoiceView[0].layoutButton.setBackgroundImage(UIImage(named: "Layout 1"), for: .normal)
-        allLayoutChoiceView[1].layoutButton.setBackgroundImage(UIImage(named: "Layout 2"), for: .normal)
-        allLayoutChoiceView[2].layoutButton.setBackgroundImage(UIImage(named: "Layout 3"), for: .normal)
+        
+        for (i, element) in allLayoutChoiceView.enumerated() {
+            element.layoutButton.setBackgroundImage(UIImage(named: "Layout \(i+1)"), for: .normal)
+        }
     }
     
-    private func assignImagesToChange(firstView: AddPhotoView, secondView: AddPhotoView, thirdView: AddPhotoView, fourthView: AddPhotoView) {
-        firstView.setImageView = { self.imageToChange = firstView.photoView }
-        secondView.setImageView = { self.imageToChange = secondView.photoView }
-        thirdView.setImageView = { self.imageToChange = thirdView.photoView }
-        fourthView.setImageView = { self.imageToChange = fourthView.photoView }
+    private func sortLayoutChoiceViews() {
+        
+        let parameters = [
+            (selected: 0, other: 1, last: 2, disposition: SquareView.GridDisposition.rectangleUp),
+            (selected: 1, other: 2, last: 0, disposition: SquareView.GridDisposition.rectangleDown),
+            (selected: 2, other: 0, last: 1, disposition:
+                SquareView.GridDisposition.fullSquares)
+        ]
+        allLayoutChoiceView.enumerated().forEach { (i, element) in
+            
+            element.didTap = {
+                self.showSelectedGrid(selected: self.allLayoutChoiceView[parameters[i].selected], other: self.allLayoutChoiceView[parameters[i].other], last: self.allLayoutChoiceView[parameters[i].last])
+                self.squareView.gridDisposition = parameters[i].disposition
+            }
+        }
     }
-    
-    private func sortLayoutChoiceView() {
-        allLayoutChoiceView[0].didTap = {self.showSelectedGrid(selected: self.allLayoutChoiceView[0], other: self.allLayoutChoiceView[1], last: self.allLayoutChoiceView[2])
-            self.squareView.gridDisposition = .rectangleUp}
-        allLayoutChoiceView[1].didTap = {self.showSelectedGrid(selected: self.allLayoutChoiceView[1], other: self.allLayoutChoiceView[2], last: self.allLayoutChoiceView[0])
-            self.squareView.gridDisposition = .rectangleDown}
-        allLayoutChoiceView[2].didTap = {self.showSelectedGrid(selected: self.allLayoutChoiceView[2], other: self.allLayoutChoiceView[0], last: self.allLayoutChoiceView[1])
-            self.squareView.gridDisposition = .fullSquares}
-    }
-    
     
     private func showSelectedGrid(selected: LayoutChoiceView, other: LayoutChoiceView, last: LayoutChoiceView) {
         selected.seletedImage.isHidden = false
         other.seletedImage.isHidden = true
         last.seletedImage.isHidden = true
+        
     }
-    
     
     // MARK: - Swipe Gesture Recognizer Settings
     
