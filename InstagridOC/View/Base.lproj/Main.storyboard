@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,23 +20,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstagridOC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu4-ev-VV4">
-                                <rect key="frame" x="149.66666666666666" y="72" width="114.66666666666666" height="37.666666666666657"/>
+                                <rect key="frame" x="130.5" y="28" width="114.5" height="37.5"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="29"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb4-oF-VOM">
-                                <rect key="frame" x="127.00000000000001" y="235.66666666666666" width="160.33333333333337" height="28.999999999999972"/>
+                                <rect key="frame" x="107.5" y="140.5" width="160.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAD-kv-iAA">
-                                <rect key="frame" x="65" y="204" width="159" height="21.333333333333343"/>
+                                <rect key="frame" x="21" y="179" width="99" height="17"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -45,10 +45,10 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6c5-t4-gx2">
-                                <rect key="frame" x="46" y="737" width="322" height="94"/>
+                                <rect key="frame" x="46" y="555" width="283" height="81"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE8-FO-xXU" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="34x-k1-OGD"/>
@@ -87,7 +87,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-FG-82s" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
-                                        <rect key="frame" x="114" y="0.0" width="94" height="94"/>
+                                        <rect key="frame" x="101" y="0.0" width="81" height="81"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VFe-FG-82s" secondAttribute="height" multiplier="1:1" id="418-j6-8rc"/>
@@ -123,7 +123,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTk-bp-XZ1" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
-                                        <rect key="frame" x="228" y="0.0" width="94" height="94"/>
+                                        <rect key="frame" x="202" y="0.0" width="81" height="81"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="RwO-oi-Ii7"/>
@@ -175,7 +175,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" axis="horizontal" spacing="20"/>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="gfO-Vj-alK">
-                                <rect key="frame" x="202.66666666666666" y="214" width="9" height="13"/>
+                                <rect key="frame" x="183" y="119" width="9" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="9" id="KTf-1b-mDA"/>
                                     <constraint firstAttribute="height" constant="13" id="xeC-My-jC0"/>
@@ -183,7 +183,7 @@
                                 <variation key="heightClass=compact" image="Arrow Left"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-vC-Tck" customClass="SquareView" customModule="InstagridOC" customModuleProvider="target">
-                                <rect key="frame" x="37" y="278" width="340" height="340"/>
+                                <rect key="frame" x="37" y="183" width="301" height="301"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -204,7 +204,7 @@
                             <constraint firstItem="gfO-Vj-alK" firstAttribute="leading" secondItem="7jL-vC-Tck" secondAttribute="trailing" constant="40" id="Bp3-od-ZdV"/>
                             <constraint firstItem="gfO-Vj-alK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EbV-OO-ZQn"/>
                             <constraint firstItem="7jL-vC-Tck" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HD3-7n-ZUs"/>
-                            <constraint firstItem="gb4-oF-VOM" firstAttribute="top" secondItem="gfO-Vj-alK" secondAttribute="bottom" constant="8.5" id="Iva-5F-tmQ"/>
+                            <constraint firstItem="cAD-kv-iAA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hff-tf-qK6"/>
                             <constraint firstItem="Lu4-ev-VV4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="JAR-z7-j2Y"/>
                             <constraint firstItem="7jL-vC-Tck" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JMa-s0-oiD"/>
                             <constraint firstItem="6c5-t4-gx2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LNP-MA-73M"/>
@@ -221,12 +221,14 @@
                             <constraint firstItem="gb4-oF-VOM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z5V-C3-6hx"/>
                             <constraint firstItem="7jL-vC-Tck" firstAttribute="top" secondItem="Lu4-ev-VV4" secondAttribute="bottom" constant="15" id="ZSW-BN-338"/>
                             <constraint firstItem="6c5-t4-gx2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="bdb-fs-e8U"/>
+                            <constraint firstItem="cAD-kv-iAA" firstAttribute="centerX" secondItem="gfO-Vj-alK" secondAttribute="centerX" id="c3M-9t-xlR"/>
                             <constraint firstItem="6c5-t4-gx2" firstAttribute="bottom" secondItem="7jL-vC-Tck" secondAttribute="bottom" id="dep-Tb-jZt"/>
                             <constraint firstItem="7jL-vC-Tck" firstAttribute="top" secondItem="Lu4-ev-VV4" secondAttribute="bottom" constant="10" id="e7T-bN-NHn"/>
                             <constraint firstItem="cAD-kv-iAA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="evn-3Y-yNb"/>
                             <constraint firstItem="6c5-t4-gx2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="g3n-QF-Qhi"/>
                             <constraint firstItem="gfO-Vj-alK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="gDh-QX-8fy"/>
                             <constraint firstItem="cAD-kv-iAA" firstAttribute="top" secondItem="gfO-Vj-alK" secondAttribute="bottom" constant="14" id="gHq-o3-VBW"/>
+                            <constraint firstItem="7jL-vC-Tck" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gcv-uc-sDY"/>
                             <constraint firstItem="7jL-vC-Tck" firstAttribute="top" secondItem="Lu4-ev-VV4" secondAttribute="bottom" constant="11" id="glE-Ix-gja"/>
                             <constraint firstItem="7jL-vC-Tck" firstAttribute="centerY" secondItem="cAD-kv-iAA" secondAttribute="centerY" id="gmQ-w5-W8o"/>
                             <constraint firstItem="Lu4-ev-VV4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jiU-OA-dOq"/>
@@ -235,7 +237,9 @@
                             <constraint firstItem="6c5-t4-gx2" firstAttribute="bottom" secondItem="7jL-vC-Tck" secondAttribute="bottom" id="mLp-lm-1yi"/>
                             <constraint firstItem="Lu4-ev-VV4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="mV6-EP-ZVp"/>
                             <constraint firstItem="7jL-vC-Tck" firstAttribute="top" secondItem="Lu4-ev-VV4" secondAttribute="bottom" constant="10.5" id="o1W-pr-xrD"/>
+                            <constraint firstItem="cAD-kv-iAA" firstAttribute="centerY" secondItem="7jL-vC-Tck" secondAttribute="centerY" id="qbz-Pd-qlL"/>
                             <constraint firstItem="Lu4-ev-VV4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="qxN-aR-Mml"/>
+                            <constraint firstItem="cAD-kv-iAA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="rGB-Ja-Bcs"/>
                             <constraint firstItem="gb4-oF-VOM" firstAttribute="top" secondItem="gfO-Vj-alK" secondAttribute="bottom" constant="8.5" id="rMh-3Y-cPx"/>
                             <constraint firstItem="7jL-vC-Tck" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="s7h-Mh-zg0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6c5-t4-gx2" secondAttribute="trailing" constant="42" id="twW-mM-pi9"/>
@@ -248,30 +252,38 @@
                                 <exclude reference="cAD-kv-iAA"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Hff-tf-qK6"/>
+                                <exclude reference="Plq-rw-4r3"/>
+                                <exclude reference="c3M-9t-xlR"/>
+                                <exclude reference="evn-3Y-yNb"/>
+                                <exclude reference="gHq-o3-VBW"/>
+                                <exclude reference="qbz-Pd-qlL"/>
+                                <exclude reference="rGB-Ja-Bcs"/>
                                 <exclude reference="M5q-jO-MeW"/>
                                 <exclude reference="V96-cy-xB3"/>
                                 <exclude reference="Vqz-Qe-IoG"/>
                                 <exclude reference="Xbx-ef-tVX"/>
                                 <exclude reference="twW-mM-pi9"/>
-                                <exclude reference="Bp3-od-ZdV"/>
-                                <exclude reference="MN9-Fi-ytb"/>
-                                <exclude reference="gDh-QX-8fy"/>
-                                <exclude reference="JMa-s0-oiD"/>
-                                <exclude reference="R1x-nT-bHK"/>
-                                <exclude reference="RFG-O7-CDj"/>
-                                <exclude reference="ZSW-BN-338"/>
-                                <exclude reference="e7T-bN-NHn"/>
-                                <exclude reference="glE-Ix-gja"/>
-                                <exclude reference="kTp-TH-ggI"/>
-                                <exclude reference="o1W-pr-xrD"/>
-                                <exclude reference="zXy-QZ-COL"/>
-                                <exclude reference="gHq-o3-VBW"/>
                                 <exclude reference="8Ki-uI-T2T"/>
                                 <exclude reference="BG7-dd-IVg"/>
                                 <exclude reference="BgL-aQ-w5A"/>
                                 <exclude reference="mV6-EP-ZVp"/>
                                 <exclude reference="qxN-aR-Mml"/>
                                 <exclude reference="xK3-b4-6ss"/>
+                                <exclude reference="JMa-s0-oiD"/>
+                                <exclude reference="R1x-nT-bHK"/>
+                                <exclude reference="RFG-O7-CDj"/>
+                                <exclude reference="ZSW-BN-338"/>
+                                <exclude reference="e7T-bN-NHn"/>
+                                <exclude reference="gcv-uc-sDY"/>
+                                <exclude reference="glE-Ix-gja"/>
+                                <exclude reference="gmQ-w5-W8o"/>
+                                <exclude reference="kTp-TH-ggI"/>
+                                <exclude reference="o1W-pr-xrD"/>
+                                <exclude reference="zXy-QZ-COL"/>
+                                <exclude reference="Bp3-od-ZdV"/>
+                                <exclude reference="MN9-Fi-ytb"/>
+                                <exclude reference="gDh-QX-8fy"/>
                                 <exclude reference="3Lx-bt-00y"/>
                                 <exclude reference="LqP-1L-Mct"/>
                                 <exclude reference="bdb-fs-e8U"/>
@@ -285,41 +297,53 @@
                                 <include reference="cAD-kv-iAA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Iva-5F-tmQ"/>
-                                <exclude reference="Z5V-C3-6hx"/>
-                                <exclude reference="rMh-3Y-cPx"/>
+                                <include reference="Hff-tf-qK6"/>
+                                <exclude reference="Plq-rw-4r3"/>
+                                <include reference="c3M-9t-xlR"/>
+                                <exclude reference="evn-3Y-yNb"/>
+                                <include reference="gHq-o3-VBW"/>
+                                <exclude reference="qbz-Pd-qlL"/>
+                                <include reference="rGB-Ja-Bcs"/>
                                 <exclude reference="2hC-kM-EKH"/>
                                 <exclude reference="6lt-oB-4zK"/>
                                 <include reference="M5q-jO-MeW"/>
                                 <include reference="V96-cy-xB3"/>
                                 <exclude reference="Xbx-ef-tVX"/>
                                 <exclude reference="lVN-Dy-tAP"/>
-                                <exclude reference="Bp3-od-ZdV"/>
-                                <exclude reference="EbV-OO-ZQn"/>
-                                <include reference="gDh-QX-8fy"/>
-                                <exclude reference="1SR-IK-11c"/>
-                                <exclude reference="HD3-7n-ZUs"/>
-                                <include reference="JMa-s0-oiD"/>
-                                <include reference="R1x-nT-bHK"/>
-                                <exclude reference="YRr-d9-VOx"/>
-                                <include reference="kTp-TH-ggI"/>
-                                <exclude reference="s7h-Mh-zg0"/>
-                                <include reference="gHq-o3-VBW"/>
                                 <exclude reference="8Ki-uI-T2T"/>
                                 <exclude reference="BG7-dd-IVg"/>
                                 <exclude reference="JAR-z7-j2Y"/>
                                 <exclude reference="mV6-EP-ZVp"/>
                                 <exclude reference="xK3-b4-6ss"/>
+                                <exclude reference="Z5V-C3-6hx"/>
+                                <exclude reference="rMh-3Y-cPx"/>
+                                <exclude reference="1SR-IK-11c"/>
+                                <exclude reference="HD3-7n-ZUs"/>
+                                <include reference="JMa-s0-oiD"/>
+                                <include reference="R1x-nT-bHK"/>
+                                <exclude reference="YRr-d9-VOx"/>
+                                <exclude reference="gcv-uc-sDY"/>
+                                <exclude reference="gmQ-w5-W8o"/>
+                                <include reference="kTp-TH-ggI"/>
+                                <exclude reference="s7h-Mh-zg0"/>
+                                <exclude reference="Bp3-od-ZdV"/>
+                                <exclude reference="EbV-OO-ZQn"/>
+                                <include reference="gDh-QX-8fy"/>
                                 <include reference="3Lx-bt-00y"/>
                                 <exclude reference="LNP-MA-73M"/>
                                 <exclude reference="g3n-QF-Qhi"/>
                                 <include reference="mLp-lm-1yi"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="Plq-rw-4r3"/>
+                                <exclude reference="evn-3Y-yNb"/>
+                                <exclude reference="gmQ-w5-W8o"/>
+                            </mask>
+                        </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
-                                <exclude reference="Iva-5F-tmQ"/>
-                                <exclude reference="rMh-3Y-cPx"/>
                                 <exclude reference="2hC-kM-EKH"/>
                                 <exclude reference="6lt-oB-4zK"/>
                                 <exclude reference="M5q-jO-MeW"/>
@@ -327,9 +351,10 @@
                                 <include reference="Vqz-Qe-IoG"/>
                                 <exclude reference="lVN-Dy-tAP"/>
                                 <include reference="twW-mM-pi9"/>
-                                <exclude reference="EbV-OO-ZQn"/>
-                                <exclude reference="MN9-Fi-ytb"/>
-                                <exclude reference="gDh-QX-8fy"/>
+                                <exclude reference="BgL-aQ-w5A"/>
+                                <exclude reference="JAR-z7-j2Y"/>
+                                <include reference="qxN-aR-Mml"/>
+                                <exclude reference="rMh-3Y-cPx"/>
                                 <exclude reference="1SR-IK-11c"/>
                                 <exclude reference="HD3-7n-ZUs"/>
                                 <exclude reference="R1x-nT-bHK"/>
@@ -337,14 +362,15 @@
                                 <exclude reference="YRr-d9-VOx"/>
                                 <exclude reference="ZSW-BN-338"/>
                                 <exclude reference="e7T-bN-NHn"/>
+                                <exclude reference="gcv-uc-sDY"/>
                                 <exclude reference="glE-Ix-gja"/>
                                 <exclude reference="kTp-TH-ggI"/>
                                 <exclude reference="o1W-pr-xrD"/>
                                 <exclude reference="s7h-Mh-zg0"/>
                                 <include reference="zXy-QZ-COL"/>
-                                <exclude reference="BgL-aQ-w5A"/>
-                                <exclude reference="JAR-z7-j2Y"/>
-                                <include reference="qxN-aR-Mml"/>
+                                <exclude reference="EbV-OO-ZQn"/>
+                                <exclude reference="MN9-Fi-ytb"/>
+                                <exclude reference="gDh-QX-8fy"/>
                                 <exclude reference="3Lx-bt-00y"/>
                                 <exclude reference="LNP-MA-73M"/>
                                 <include reference="LqP-1L-Mct"/>
@@ -367,7 +393,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow Left" width="3.3333332538604736" height="4.6666665077209473"/>
-        <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
+        <image name="Arrow Left" width="3.5" height="4.5"/>
+        <image name="Arrow Up" width="4.5" height="3.5"/>
     </resources>
 </document>
