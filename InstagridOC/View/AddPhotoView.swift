@@ -19,7 +19,7 @@ class AddPhotoView: UIView {
         super.init(frame: frame)
         loadViewFromNib(name: "AddPhotoView")
     }
-    
+    @IBOutlet weak var plusView: UIImageView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!

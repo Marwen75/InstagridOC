@@ -72,6 +72,7 @@ class ViewController: UIViewController {
         
     }
     
+    
     // MARK: - Swipe Gesture Recognizer Settings
     
     @objc private func setAnimationForLeftAndUpSwipes() {
