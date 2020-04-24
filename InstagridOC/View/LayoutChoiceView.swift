@@ -9,36 +9,21 @@
 import UIKit
 @IBDesignable
 class LayoutChoiceView: UIView {
-
     required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         loadViewFromNib(name: "LayoutChoiceView")
         }
-        
         override init(frame: CGRect) {
             super.init(frame: frame)
             loadViewFromNib(name: "LayoutChoiceView")
         }
-    
+    // swiftlint:disable redundant_optional_initialization
     @IBOutlet var contentView: UIView!
-    
     @IBOutlet weak var layoutButton: UIButton!
-    
     @IBOutlet weak var seletedImage: UIImageView!
-  
     var didTap: (() -> Void)? = nil
 
-
-    
     @IBAction func layoutButtonTapped(_ sender: UIButton) {
         didTap?()
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
