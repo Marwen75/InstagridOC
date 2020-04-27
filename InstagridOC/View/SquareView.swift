@@ -8,7 +8,9 @@
 
 import UIKit
 @IBDesignable
+
 class SquareView: UIView {
+    // MARK: - NIB init
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadViewFromNib(name: "SquareView")
@@ -17,19 +19,23 @@ class SquareView: UIView {
         super.init(frame: frame)
         loadViewFromNib(name: "SquareView")
     }
-    // outlets
+    // MARK: - Outlets
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var upperTwoSquares: UIStackView!
     @IBOutlet weak var lowerTwoSquaresView: UIStackView!
     @IBOutlet var customClassAllViews: [AddPhotoView]!
+    // Enumeration for the 3 possible layouts
     enum GridDisposition {
         case rectangleDown, rectangleUp, fullSquares
     }
+    // Using poperties observation
     var gridDisposition: GridDisposition = .rectangleDown {
         didSet {
             setDisposition(gridDisposition)
         }
     }
+    // changing the disposition of the central grid when a layout
+    // is selected.
     private func setDisposition(_ gridDisposition: GridDisposition) {
         switch gridDisposition {
         case .rectangleDown:

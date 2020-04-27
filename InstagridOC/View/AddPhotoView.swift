@@ -9,6 +9,7 @@
 import UIKit
 @IBDesignable
 class AddPhotoView: UIView {
+    // MARK: - NIB init
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadViewFromNib(name: "AddPhotoView")
@@ -18,11 +19,13 @@ class AddPhotoView: UIView {
         loadViewFromNib(name: "AddPhotoView")
     }
     // swiftlint:disable redundant_optional_initialization
+    // MARK: - Outlets
     @IBOutlet weak var plusView: UIImageView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var photoView: UIImageView!
     var addPhotoButtonTapped: ((UIImageView) -> Void)? = nil
+    // MARK: - Actions
     @IBAction func buttonTapped(_ sender: Any) {
         addPhotoButtonTapped?(photoView)
     }

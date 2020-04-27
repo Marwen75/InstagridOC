@@ -8,6 +8,7 @@
 import UIKit
 // swiftlint:disable trailing_whitespace
 // swiftlint:disable force_cast
+// Using a UIView extension ton not repeating code during Nib Init
 extension UIView {    
     func loadViewFromNib(name: String) {
            let bundle = Bundle(for: type(of: self))

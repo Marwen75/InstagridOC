@@ -37,12 +37,14 @@ class ViewController: UIViewController {
             name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     // MARK: - LayoutChoiceView and AddPhotoView Settings
+    // assigning a background image to our customized views
     private func assignBackgroundImages() {
         allLayoutChoiceView[1].seletedImage.isHidden = false
         for (idx, element) in allLayoutChoiceView.enumerated() {
             element.layoutButton.setBackgroundImage(UIImage(named: "Layout \(idx+1)"), for: .normal)
         }
     }
+    // making the correct grid appear when selected
     private func sortLayoutChoiceViews() {
         let parameters = [
             (selected: 0, other: 1, last: 2, disposition: SquareView.GridDisposition.rectangleUp),
@@ -59,6 +61,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    // show the selected image of the layoutview wich have been tapped on
     private func showSelectedGrid(selected: LayoutChoiceView, other: LayoutChoiceView, last: LayoutChoiceView) {
         selected.seletedImage.isHidden = false
         other.seletedImage.isHidden = true
@@ -82,6 +85,7 @@ class ViewController: UIViewController {
             }
         })
     }
+    // make the central grid returning at it's place with the inverse animation
     private func reverseSquareViewSwipeAnimation() {
         UIView.animate(withDuration: 0.3, animations: {
             self.squareView.transform = .identity
