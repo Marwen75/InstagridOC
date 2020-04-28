@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="iN0-l3-epB" id="rkf-e2-Jtj"/>
                 <outlet property="layoutButton" destination="THe-uD-TuE" id="K7U-mc-j5O"/>
                 <outlet property="seletedImage" destination="HFC-pU-OIG" id="7oB-Vr-bod"/>
             </connections>

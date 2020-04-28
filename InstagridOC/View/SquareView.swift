@@ -9,18 +9,9 @@
 import UIKit
 @IBDesignable
 
-class SquareView: UIView {
-    // MARK: - NIB init
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        loadViewFromNib(name: "SquareView")
-    }
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        loadViewFromNib(name: "SquareView")
-    }
+class SquareView: NibView {
+ 
     // MARK: - Outlets
-    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var upperTwoSquares: UIStackView!
     @IBOutlet weak var lowerTwoSquaresView: UIStackView!
     @IBOutlet var customClassAllViews: [AddPhotoView]!

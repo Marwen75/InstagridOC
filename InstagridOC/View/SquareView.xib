@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SquareView" customModule="InstagridOC" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="iN0-l3-epB" id="LlC-b6-YND"/>
                 <outlet property="lowerTwoSquaresView" destination="cQb-Ks-Gco" id="Zhd-Mh-D1U"/>
                 <outlet property="upperTwoSquares" destination="W4m-Gg-zN3" id="2Ej-db-VVM"/>
                 <outletCollection property="customClassAllViews" destination="LRW-p8-ang" collectionClass="NSMutableArray" id="8ZV-0r-4Ey"/>

@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonAndImageView" customModule="InstagridOC" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="iN0-l3-epB" id="FTl-LL-Oyu"/>
                 <outlet property="oneButton" destination="238-jM-0tZ" id="3Lz-Wk-MXu"/>
                 <outlet property="photoView" destination="WP3-aH-9Se" id="6fd-Y9-On9"/>
                 <outlet property="plusView" destination="Tss-kb-QP9" id="sKa-KO-LHJ"/>

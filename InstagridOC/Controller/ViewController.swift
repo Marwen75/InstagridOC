@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     // MARK: - Outlets and Properties
-    // swiftlint:disable redundant_optional_initialization
     @IBOutlet weak var squareView: SquareView!
     @IBOutlet var allLayoutChoiceView: [LayoutChoiceView]!
+    
     var imageToChange: UIImageView? = nil
     let imagePicker = UIImagePickerController()
     var swipeGestureRecognizer: UISwipeGestureRecognizer?
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             self.imageToChange = photoView
             }
         }
+        
         self.sortLayoutChoiceViews()
         imagePicker.delegate = self
         swipeGestureRecognizer = UISwipeGestureRecognizer(target: self,
@@ -36,14 +37,16 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(assignDirectionToTheSwipe),
             name: UIDevice.orientationDidChangeNotification, object: nil)
     }
+    
     // MARK: - LayoutChoiceView and AddPhotoView Settings
     // assigning a background image to our customized views
     private func assignBackgroundImages() {
         allLayoutChoiceView[1].seletedImage.isHidden = false
-        for (idx, element) in allLayoutChoiceView.enumerated() {
-            element.layoutButton.setBackgroundImage(UIImage(named: "Layout \(idx+1)"), for: .normal)
+        for (i, element) in allLayoutChoiceView.enumerated() {
+            element.layoutButton.setBackgroundImage(UIImage(named: "Layout \(i+1)"), for: .normal)
         }
     }
+    
     // making the correct grid appear when selected
     private func sortLayoutChoiceViews() {
         let parameters = [
@@ -52,21 +55,23 @@ class ViewController: UIViewController {
             (selected: 2, other: 0, last: 1, disposition:
                 SquareView.GridDisposition.fullSquares)
         ]
-        allLayoutChoiceView.enumerated().forEach { (idx, element) in
+        allLayoutChoiceView.enumerated().forEach { (i, element) in
             element.didTap = {
-                self.showSelectedGrid(selected: self.allLayoutChoiceView[parameters[idx].selected],
-                    other: self.allLayoutChoiceView[parameters[idx].other],
-                    last: self.allLayoutChoiceView[parameters[idx].last])
-                self.squareView.gridDisposition = parameters[idx].disposition
+                self.showSelectedGrid(selected: self.allLayoutChoiceView[parameters[i].selected],
+                    other: self.allLayoutChoiceView[parameters[i].other],
+                    last: self.allLayoutChoiceView[parameters[i].last])
+                self.squareView.gridDisposition = parameters[i].disposition
             }
         }
     }
+    
     // show the selected image of the layoutview wich have been tapped on
     private func showSelectedGrid(selected: LayoutChoiceView, other: LayoutChoiceView, last: LayoutChoiceView) {
         selected.seletedImage.isHidden = false
         other.seletedImage.isHidden = true
         last.seletedImage.isHidden = true
     }
+    
     // MARK: - Swipe Gesture Recognizer Settings
     @objc private func setAnimationForLeftAndUpSwipes() {
         if swipeGestureRecognizer?.direction == .up {
@@ -75,7 +80,7 @@ class ViewController: UIViewController {
             squareViewSwipeAnimation(duration: 0.3, x: -view.frame.width, y: 0, succeed: openActivityController)
         }
     }
-    // swiftlint:disable identifier_name
+    
     private func squareViewSwipeAnimation(duration: Double, x: CGFloat, y: CGFloat, succeed: @escaping () -> Void) {
         UIView.animate(withDuration: duration, animations: {
             self.squareView.transform = CGAffineTransform(translationX: x, y: y)
@@ -85,12 +90,14 @@ class ViewController: UIViewController {
             }
         })
     }
+    
     // make the central grid returning at it's place with the inverse animation
     private func reverseSquareViewSwipeAnimation() {
         UIView.animate(withDuration: 0.3, animations: {
             self.squareView.transform = .identity
         })
     }
+    
     @objc private func assignDirectionToTheSwipe() {
         if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
             swipeGestureRecognizer?.direction = .left
@@ -98,6 +105,7 @@ class ViewController: UIViewController {
             swipeGestureRecognizer?.direction = .up
         }
     }
+    
     // MARK: - Activity Controller
     private func openActivityController() {
         let userImageToShare = [UIImage.init(view: squareView)]

@@ -9,6 +9,7 @@
 import UIKit
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     func openUserLibrary() {
         if   UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
             imagePicker.allowsEditing = false
@@ -16,8 +17,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
-    // swiftlint:disable colon
-    // swiftlint:disable line_length
+   
     func imagePickerController(_ picker:UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let imageToChange = imageToChange else {return}
         guard let pickedImage = info[.originalImage] as? UIImage else {return}
