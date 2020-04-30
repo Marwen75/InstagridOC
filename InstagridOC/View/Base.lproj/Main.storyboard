@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,19 +18,19 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstagridOC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu4-ev-VV4">
-                                <rect key="frame" x="149.66666666666666" y="72" width="114.66666666666666" height="37.666666666666657"/>
+                                <rect key="frame" x="130.5" y="28" width="114.5" height="37.5"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="29"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb4-oF-VOM">
-                                <rect key="frame" x="127.00000000000001" y="235.66666666666666" width="160.33333333333337" height="28.999999999999972"/>
+                                <rect key="frame" x="107.5" y="140.5" width="160.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -45,10 +45,10 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6c5-t4-gx2">
-                                <rect key="frame" x="46" y="737" width="322" height="94"/>
+                                <rect key="frame" x="46" y="555" width="283" height="81"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE8-FO-xXU" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE8-FO-xXU" customClass="LayoutChoiceView" customModule="Instagrid" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="34x-k1-OGD"/>
@@ -86,8 +86,8 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-FG-82s" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
-                                        <rect key="frame" x="114" y="0.0" width="94" height="94"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-FG-82s" customClass="LayoutChoiceView" customModule="Instagrid" customModuleProvider="target">
+                                        <rect key="frame" x="101" y="0.0" width="81" height="81"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VFe-FG-82s" secondAttribute="height" multiplier="1:1" id="418-j6-8rc"/>
@@ -122,8 +122,8 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTk-bp-XZ1" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
-                                        <rect key="frame" x="228" y="0.0" width="94" height="94"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTk-bp-XZ1" customClass="LayoutChoiceView" customModule="Instagrid" customModuleProvider="target">
+                                        <rect key="frame" x="202" y="0.0" width="81" height="81"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="RwO-oi-Ii7"/>
@@ -175,15 +175,15 @@
                                 <variation key="heightClass=regular-widthClass=compact" axis="horizontal" spacing="20"/>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="gfO-Vj-alK">
-                                <rect key="frame" x="202.66666666666666" y="214" width="9" height="13"/>
+                                <rect key="frame" x="183" y="119" width="9" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="9" id="KTf-1b-mDA"/>
                                     <constraint firstAttribute="height" constant="13" id="xeC-My-jC0"/>
                                 </constraints>
                                 <variation key="heightClass=compact" image="Arrow Left"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-vC-Tck" customClass="SquareView" customModule="InstagridOC" customModuleProvider="target">
-                                <rect key="frame" x="37" y="278" width="340" height="340"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-vC-Tck" customClass="SquareView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="37" y="183" width="301" height="301"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -257,6 +257,8 @@
                                 <exclude reference="c3M-9t-xlR"/>
                                 <exclude reference="evn-3Y-yNb"/>
                                 <exclude reference="gHq-o3-VBW"/>
+                                <exclude reference="qbz-Pd-qlL"/>
+                                <exclude reference="rGB-Ja-Bcs"/>
                                 <exclude reference="M5q-jO-MeW"/>
                                 <exclude reference="V96-cy-xB3"/>
                                 <exclude reference="Vqz-Qe-IoG"/>
@@ -279,16 +281,14 @@
                                 <exclude reference="kTp-TH-ggI"/>
                                 <exclude reference="o1W-pr-xrD"/>
                                 <exclude reference="zXy-QZ-COL"/>
+                                <exclude reference="Bp3-od-ZdV"/>
+                                <exclude reference="MN9-Fi-ytb"/>
+                                <exclude reference="gDh-QX-8fy"/>
                                 <exclude reference="3Lx-bt-00y"/>
                                 <exclude reference="LqP-1L-Mct"/>
                                 <exclude reference="bdb-fs-e8U"/>
                                 <exclude reference="dep-Tb-jZt"/>
                                 <exclude reference="mLp-lm-1yi"/>
-                                <exclude reference="qbz-Pd-qlL"/>
-                                <exclude reference="rGB-Ja-Bcs"/>
-                                <exclude reference="Bp3-od-ZdV"/>
-                                <exclude reference="MN9-Fi-ytb"/>
-                                <exclude reference="gDh-QX-8fy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -302,6 +302,8 @@
                                 <include reference="c3M-9t-xlR"/>
                                 <exclude reference="evn-3Y-yNb"/>
                                 <include reference="gHq-o3-VBW"/>
+                                <exclude reference="qbz-Pd-qlL"/>
+                                <include reference="rGB-Ja-Bcs"/>
                                 <exclude reference="2hC-kM-EKH"/>
                                 <exclude reference="6lt-oB-4zK"/>
                                 <include reference="M5q-jO-MeW"/>
@@ -324,15 +326,13 @@
                                 <exclude reference="gmQ-w5-W8o"/>
                                 <include reference="kTp-TH-ggI"/>
                                 <exclude reference="s7h-Mh-zg0"/>
+                                <exclude reference="Bp3-od-ZdV"/>
+                                <exclude reference="EbV-OO-ZQn"/>
+                                <include reference="gDh-QX-8fy"/>
                                 <include reference="3Lx-bt-00y"/>
                                 <exclude reference="LNP-MA-73M"/>
                                 <exclude reference="g3n-QF-Qhi"/>
                                 <include reference="mLp-lm-1yi"/>
-                                <exclude reference="qbz-Pd-qlL"/>
-                                <include reference="rGB-Ja-Bcs"/>
-                                <exclude reference="Bp3-od-ZdV"/>
-                                <exclude reference="EbV-OO-ZQn"/>
-                                <include reference="gDh-QX-8fy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -368,15 +368,15 @@
                                 <exclude reference="o1W-pr-xrD"/>
                                 <exclude reference="s7h-Mh-zg0"/>
                                 <include reference="zXy-QZ-COL"/>
+                                <exclude reference="EbV-OO-ZQn"/>
+                                <exclude reference="MN9-Fi-ytb"/>
+                                <exclude reference="gDh-QX-8fy"/>
                                 <exclude reference="3Lx-bt-00y"/>
                                 <exclude reference="LNP-MA-73M"/>
                                 <include reference="LqP-1L-Mct"/>
                                 <include reference="bdb-fs-e8U"/>
                                 <exclude reference="dep-Tb-jZt"/>
                                 <exclude reference="g3n-QF-Qhi"/>
-                                <exclude reference="EbV-OO-ZQn"/>
-                                <exclude reference="MN9-Fi-ytb"/>
-                                <exclude reference="gDh-QX-8fy"/>
                             </mask>
                         </variation>
                     </view>
@@ -393,7 +393,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow Left" width="3.3333332538604736" height="4.6666665077209473"/>
-        <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
+        <image name="Arrow Left" width="3.5" height="4.5"/>
+        <image name="Arrow Up" width="4.5" height="3.5"/>
     </resources>
 </document>

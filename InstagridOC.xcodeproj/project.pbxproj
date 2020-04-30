@@ -61,14 +61,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C2444D3A243FDDDE003A0AD7 /* Extensions And NIbInit */ = {
+		C2444D3A243FDDDE003A0AD7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C2444D3B243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift */,
-				C2C772152458E7D500BC5E12 /* NibView.swift */,
-				C2444D3D243FDF89003A0AD7 /* UIImageExtension.swift */,
+				C2C77218245B0FD300BC5E12 /* Extensions */,
+				C2C77217245B0FBD00BC5E12 /* NibInit */,
 			);
-			path = "Extensions And NIbInit";
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		C2788B8624226B7C00BC630D = {
@@ -93,7 +92,7 @@
 				C2788BA024226B8300BC630D /* Info.plist */,
 				C2788BAC2422825200BC630D /* Controller */,
 				C2788BAB2422824800BC630D /* View */,
-				C2444D3A243FDDDE003A0AD7 /* Extensions And NIbInit */,
+				C2444D3A243FDDDE003A0AD7 /* Tools */,
 				C2788BAD2422826200BC630D /* Supporting Files */,
 			);
 			path = InstagridOC;
@@ -133,6 +132,23 @@
 				C2788B9D24226B8300BC630D /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2C77217245B0FBD00BC5E12 /* NibInit */ = {
+			isa = PBXGroup;
+			children = (
+				C2C772152458E7D500BC5E12 /* NibView.swift */,
+			);
+			path = NibInit;
+			sourceTree = "<group>";
+		};
+		C2C77218245B0FD300BC5E12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2444D3B243FDF01003A0AD7 /* Viewcontroller+OpenUserLibrary.swift */,
+				C2444D3D243FDF89003A0AD7 /* UIImageExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,7 +387,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marwen.InstagridOC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = InstagridOC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -388,7 +404,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marwen.InstagridOC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = InstagridOC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

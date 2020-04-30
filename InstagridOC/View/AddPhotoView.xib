@@ -30,7 +30,6 @@
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="GyU-bK-nuB"/>
                         <constraint firstAttribute="width" secondItem="Tss-kb-QP9" secondAttribute="height" multiplier="1:1" id="iDA-fZ-Voq"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="z0H-K2-8cs"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WP3-aH-9Se">

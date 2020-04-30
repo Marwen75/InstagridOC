@@ -15,39 +15,41 @@ class ViewController: UIViewController {
     
     var imageToChange: UIImageView? = nil
     let imagePicker = UIImagePickerController()
-    var swipeGestureRecognizer: UISwipeGestureRecognizer?
+    private var swipeGestureRecognizer: UISwipeGestureRecognizer?
+    
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         squareView.gridDisposition = .rectangleDown
         assignBackgroundImages()
-        squareView.customClassAllViews.forEach { $0.addPhotoButtonTapped = { photoView in
-            self.openUserLibrary()
-            self.imageToChange = photoView
+        squareView.customClassAllViews.forEach {
+            $0.addPhotoButtonTapped = { [weak self] photoView in
+                guard let strongSelf = self else { return }
+                strongSelf.openUserLibrary()
+                strongSelf.imageToChange = photoView
             }
         }
         
         self.sortLayoutChoiceViews()
         imagePicker.delegate = self
-        swipeGestureRecognizer = UISwipeGestureRecognizer(target: self,
-        action: #selector(setAnimationForLeftAndUpSwipes))
+        swipeGestureRecognizer = UISwipeGestureRecognizer(target:
+        self, action:#selector(setAnimationForLeftAndUpSwipes))
         guard let swipeGestureRecognizer = swipeGestureRecognizer else {return}
         squareView.addGestureRecognizer(swipeGestureRecognizer)
         assignDirectionToTheSwipe()
-        NotificationCenter.default.addObserver(self, selector: #selector(assignDirectionToTheSwipe),
-            name: UIDevice.orientationDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(assignDirectionToTheSwipe), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     // MARK: - LayoutChoiceView and AddPhotoView Settings
     // assigning a background image to our customized views
     private func assignBackgroundImages() {
         allLayoutChoiceView[1].seletedImage.isHidden = false
-        for (i, element) in allLayoutChoiceView.enumerated() {
+        allLayoutChoiceView.enumerated().forEach { (i, element) in
             element.layoutButton.setBackgroundImage(UIImage(named: "Layout \(i+1)"), for: .normal)
         }
     }
     
-    // making the correct grid appear when selected
+    // making the correct grid appear on the central squareview according to the selected Layout
     private func sortLayoutChoiceViews() {
         let parameters = [
             (selected: 0, other: 1, last: 2, disposition: SquareView.GridDisposition.rectangleUp),
@@ -55,12 +57,13 @@ class ViewController: UIViewController {
             (selected: 2, other: 0, last: 1, disposition:
                 SquareView.GridDisposition.fullSquares)
         ]
-        allLayoutChoiceView.enumerated().forEach { (i, element) in
+        allLayoutChoiceView.enumerated().forEach { [weak self] (i, element) in
+            guard let strongSelf = self else { return }
             element.didTap = {
-                self.showSelectedGrid(selected: self.allLayoutChoiceView[parameters[i].selected],
-                    other: self.allLayoutChoiceView[parameters[i].other],
-                    last: self.allLayoutChoiceView[parameters[i].last])
-                self.squareView.gridDisposition = parameters[i].disposition
+                strongSelf.showSelectedGrid(selected: strongSelf.allLayoutChoiceView[parameters[i].selected],
+                    other: strongSelf.allLayoutChoiceView[parameters[i].other],
+                    last: strongSelf.allLayoutChoiceView[parameters[i].last])
+                strongSelf.squareView.gridDisposition = parameters[i].disposition
             }
         }
     }
@@ -111,7 +114,7 @@ class ViewController: UIViewController {
         let userImageToShare = [UIImage.init(view: squareView)]
         let activityController =
             UIActivityViewController(activityItems:
-            userImageToShare as [Any], applicationActivities: nil)
+                userImageToShare as [Any], applicationActivities: nil)
         present(activityController, animated: true)
         activityController.completionWithItemsHandler = { activiy, completed, items, error in
             self.reverseSquareViewSwipeAnimation()

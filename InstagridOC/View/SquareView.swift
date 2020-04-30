@@ -25,8 +25,7 @@ class SquareView: NibView {
             setDisposition(gridDisposition)
         }
     }
-    // changing the disposition of the central grid when a layout
-    // is selected.
+    // changing the disposition of the central grid when a layout is selected.
     private func setDisposition(_ gridDisposition: GridDisposition) {
         switch gridDisposition {
         case .rectangleDown:
