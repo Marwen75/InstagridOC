@@ -18,7 +18,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstagridOC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6c5-t4-gx2">
                                 <rect key="frame" x="46" y="555" width="283" height="81"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE8-FO-xXU" customClass="LayoutChoiceView" customModule="Instagrid" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE8-FO-xXU" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -86,7 +86,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-FG-82s" customClass="LayoutChoiceView" customModule="Instagrid" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-FG-82s" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
                                         <rect key="frame" x="101" y="0.0" width="81" height="81"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -122,7 +122,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTk-bp-XZ1" customClass="LayoutChoiceView" customModule="Instagrid" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTk-bp-XZ1" customClass="LayoutChoiceView" customModule="InstagridOC" customModuleProvider="target">
                                         <rect key="frame" x="202" y="0.0" width="81" height="81"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -182,7 +182,7 @@
                                 </constraints>
                                 <variation key="heightClass=compact" image="Arrow Left"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-vC-Tck" customClass="SquareView" customModule="Instagrid" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-vC-Tck" customClass="SquareView" customModule="InstagridOC" customModuleProvider="target">
                                 <rect key="frame" x="37" y="183" width="301" height="301"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>

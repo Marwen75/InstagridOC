@@ -121,3 +121,10 @@ class ViewController: UIViewController {
         }
     }
 }
+
+extension UIImagePickerController {
+    
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .all
+    }
+}
